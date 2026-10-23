@@ -1,0 +1,39 @@
+
+# User uploaded files and media
+/uploads/
+
+# WordPress logs
+/logs/
+/wflogs/
+/debug
+/debug.log
+*.log
+
+# WordPress temporary and upgrade files
+/upgrade/
+/cache/
+/upgrade-temp-backup/
+
+# Ignore OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ignore local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Ignore database exports and backups
+*.sql
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.bak
+*.backup
+
+# Keep plugins, themes and must-use plugins
+!/plugins/
+!/themes/
+!/mu-plugins/

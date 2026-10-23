@@ -1,0 +1,187 @@
+/* Dlux Booking widgets. Everything is scoped under .dlux-w so the theme is untouched. */
+.dlux-w{--dx-pink:#E5156C;--dx-pink-d:#BE0F57;--dx-pink-l:#FFF0F6;--dx-ink:#18171C;--dx-mute:#5E5B68;--dx-line:#DCD9E0;--dx-sunk:#F6F5F8;--dx-ok:#1D7F52;--dx-plate:#1B2F6B;
+  font-family:Barlow,"Segoe UI",system-ui,sans-serif;color:var(--dx-ink);font-size:16px;line-height:1.45;box-sizing:border-box}
+.dlux-w *,.dlux-w *::before,.dlux-w *::after{box-sizing:border-box}
+.dlux-w h2,.dlux-w h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;line-height:1.1;margin:0 0 12px;color:var(--dx-ink)}
+.dlux-w h2{font-size:40px;font-style:italic;text-transform:uppercase}
+.dlux-w h3{font-size:26px}
+.dlux-w h3 small{font-family:Barlow,sans-serif;font-weight:500;font-size:15px;color:var(--dx-mute)}
+.dlux-w button{font:inherit;cursor:pointer}
+.dlux-w button:disabled{cursor:not-allowed}
+.dlux-w :focus-visible{outline:3px solid var(--dx-pink);outline-offset:2px}
+.dlux-muted{color:var(--dx-mute)}.dlux-small{font-size:14px}
+.dlux-loading{color:var(--dx-mute)}
+.dlux-card{background:#fff;border-radius:16px;box-shadow:0 10px 34px rgba(24,23,28,.12);padding:28px}
+.dlux-flex{display:flex;flex-wrap:wrap;gap:32px}
+.dlux-main{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.dlux-main section{display:flex;flex-direction:column;gap:12px}
+.dlux-main section h3{margin:0}
+.dlux-steps{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap;font-weight:600;font-size:14px}
+.dlux-steps li{background:#EEEDF1;color:var(--dx-mute);padding:7px 14px;border-radius:999px}
+.dlux-steps li.on{background:var(--dx-ink);color:#fff}.dlux-steps li.done{background:#DDF2E7;color:#1D6E48}
+.dlux-pills,.dlux-chips{display:flex;gap:8px;flex-wrap:wrap}
+.dlux-pill{font-weight:600;padding:11px 18px;border-radius:999px;min-height:44px;border:1px solid #CFCCD6;background:#fff;color:var(--dx-ink)}
+.dlux-pill.on{background:var(--dx-ink);border-color:var(--dx-ink);color:#fff}
+.dlux-pkgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.dlux-pkg{text-align:left;display:flex;flex-direction:column;gap:8px;padding:16px;border-radius:12px;border:1px solid var(--dx-line);background:#fff;color:var(--dx-ink);min-height:200px}
+.dlux-pkg:hover{border-color:var(--dx-pink)}
+.dlux-pkg.on{border:2px solid var(--dx-pink);background:var(--dx-pink-l);box-shadow:0 4px 14px rgba(229,21,108,.18)}
+.dlux-pkg.dlux-static{cursor:default}.dlux-pkg.dlux-static:hover{border-color:var(--dx-line)}
+.dlux-pkg-n{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:26px;line-height:1}
+.dlux-pkg-p{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:32px;line-height:1;color:var(--dx-pink-d)}
+.dlux-pkg-d{font-size:13.5px;color:var(--dx-mute);line-height:1.4}
+.dlux-badge{align-self:flex-start;background:var(--dx-ink);color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;padding:3px 9px;border-radius:999px}
+.dlux-badge.pink{background:var(--dx-pink)}
+.dlux-chip{font-size:14px;font-weight:500;padding:9px 14px;border-radius:999px;min-height:40px;border:1px solid #CFCCD6;background:#fff;color:var(--dx-ink)}
+.dlux-chip.on{background:#FCE4EE;border-color:var(--dx-pink);color:#8E0B41;font-weight:600}
+.dlux-days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.dlux-day{flex:none;min-width:70px;padding:8px 10px;border-radius:10px;border:1px solid var(--dx-line);background:#fff;color:var(--dx-ink);text-align:center;line-height:1.15}
+.dlux-day small{display:block;font-size:12.5px}.dlux-day b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:26px}
+.dlux-day.on{background:var(--dx-ink);border-color:var(--dx-ink);color:#fff}
+.dlux-slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.dlux-slot{font-weight:600;padding:12px 6px;border-radius:8px;min-height:44px;border:1px solid #CFCCD6;background:#fff;color:var(--dx-ink)}
+.dlux-slot.on{background:var(--dx-pink);border-color:var(--dx-pink);color:#fff}
+.dlux-slot:disabled{background:#F1F0F3;color:#8F8B99;border-style:dashed}
+.dlux-sum{flex:1 1 280px;align-self:flex-start;background:var(--dx-sunk);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;position:sticky;top:24px}
+.dlux-sum h3{margin:0}
+.dlux-row{display:flex;justify-content:space-between;gap:12px}
+.dlux-row small{color:var(--dx-mute)}
+.dlux-when{display:flex;gap:10px;align-items:center;font-size:15px;padding-top:8px;border-top:1px solid var(--dx-line)}
+.dlux-when svg{flex:none}
+.dlux-total{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--dx-ink);padding-top:12px;font-weight:600}
+.dlux-total b{font-family:"Barlow Condensed",sans-serif;font-size:40px}
+.dlux-sum p{margin:0}
+.dlux-btn{display:inline-block;text-align:center;background:var(--dx-pink);color:#fff!important;text-decoration:none!important;font-weight:700;font-size:17px;padding:15px 22px;border-radius:10px;border:0;min-height:48px}
+.dlux-sum .dlux-btn{display:block;width:100%}
+.dlux-btn:hover{background:var(--dx-pink-d)}
+.dlux-btn:disabled{opacity:.45}
+.dlux-btn-dark{background:var(--dx-ink)}.dlux-btn-dark:hover{background:#000}
+.dlux-btn-line{background:#fff;color:var(--dx-ink)!important;border:1px solid #CFCCD6}.dlux-btn-line:hover{background:var(--dx-sunk)}
+.dlux-btn-sm{font-size:15px;padding:10px 14px;min-height:42px;margin-top:auto}
+.dlux-link{background:none;border:0;padding:0;color:var(--dx-pink-d);font-weight:600;align-self:flex-start}
+.dlux-f{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
+.dlux-f small{font-weight:400;color:var(--dx-mute)}
+.dlux-f input,.dlux-f select,.dlux-f textarea{font:400 16px Barlow,sans-serif;border:1px solid #CFCCD6;border-radius:8px;padding:12px;min-height:46px;width:100%;background:#fff;color:var(--dx-ink)}
+.dlux-f input:focus,.dlux-f select:focus,.dlux-f textarea:focus{border-color:var(--dx-pink);outline:2px solid #FCE4EE}
+.dlux-w input.dlux-plate,.dlux-plate{font-family:"Barlow Condensed",sans-serif!important;font-weight:700!important;font-size:30px!important;letter-spacing:.1em;text-transform:uppercase;color:var(--dx-plate)!important;border:2px solid var(--dx-plate)!important;border-radius:8px;padding:10px 14px;max-width:260px;background:#fff;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3.5px var(--dx-plate)}
+.dlux-plate-show{display:inline-block;font-size:26px!important;padding:5px 12px}
+.dlux-grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.dlux-check{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.dlux-check input{width:20px;height:20px;accent-color:var(--dx-pink);margin:2px 0 0;flex:none}
+.dlux-radio{display:flex;gap:12px;align-items:flex-start;border:1px solid #CFCCD6;border-radius:12px;padding:16px;cursor:pointer}
+.dlux-radio.on{border:2px solid var(--dx-pink);background:var(--dx-pink-l)}
+.dlux-radio input{width:20px;height:20px;accent-color:var(--dx-pink);margin:2px 0 0;flex:none}
+.dlux-radio small{color:var(--dx-mute)}
+.dlux-err{background:#F8DEDF;color:#9B2C2F;border-radius:10px;padding:12px 14px;font-weight:500}
+.dlux-note{background:#FBEBD2;color:#7A4600;border-radius:10px;padding:12px 14px}
+.dlux-uplist{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0 24px}
+.dlux-uplist div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--dx-line)}
+.dlux-toggles{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.dlux-seg{display:inline-flex;flex-wrap:wrap;background:#2A2930;border-radius:999px;padding:4px}
+.dlux-seg button{border:0;background:transparent;color:#E8E6EC;font-weight:600;padding:10px 18px;border-radius:999px;min-height:44px}
+.dlux-seg button.on{background:#fff;color:var(--dx-ink)}
+.dlux-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.dlux-tier{background:#fff;border:1px solid var(--dx-line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:6px}
+.dlux-tier h3{font-size:32px;margin:0}
+.dlux-tier p{margin:0}
+.dlux-tier.best{background:var(--dx-ink);color:#fff;border:2px solid var(--dx-pink);box-shadow:0 12px 30px rgba(229,21,108,.25)}
+.dlux-tier.best h3{color:#fff}.dlux-tier.best .dlux-muted{color:#CFCCD6}
+.dlux-tier-p b{font-family:"Barlow Condensed",sans-serif;font-size:44px}
+.dlux-tier ul{margin:8px 0 12px;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.dlux-tier .dlux-btn{margin-top:auto}
+.dlux-joinform{margin-top:20px;display:flex;flex-direction:column;gap:14px}
+.dlux-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.dlux-done{display:flex;flex-direction:column;gap:14px;max-width:760px}
+.dlux-done p{margin:0}
+.dlux-tick{width:64px;height:64px;border-radius:50%;background:var(--dx-ok);color:#fff;font-size:34px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.dlux-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.dlux-facts small{display:block;color:var(--dx-mute);font-size:12.5px;letter-spacing:.04em}
+@media (max-width:640px){.dlux-card{padding:18px;border-radius:12px}.dlux-sum{position:static}.dlux-w h2{font-size:32px}}
+@media (prefers-reduced-motion:reduce){.dlux-w *{scroll-behavior:auto!important}}
+/* v3: booking mode switch + plan price options */
+.dlux-modes{margin:0 0 24px}
+.dlux-modes .dlux-seg{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:520px;flex-wrap:nowrap}
+.dlux-modes .dlux-seg button{font-size:15px;padding:10px 12px;white-space:nowrap;text-align:center}
+[data-pane][hidden]{display:none!important}
+.dlux-opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.dlux-opt{border:1px solid var(--dx-line);background:transparent;color:inherit;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;min-height:34px;cursor:pointer}
+.dlux-opt.on{background:var(--dx-pink);border-color:var(--dx-pink);color:#fff}
+.dlux-tier.best .dlux-opt{border-color:#5A5862}
+/* v3.0.2: spacing */
+.dlux-w[data-dlux]{box-sizing:border-box;padding:32px clamp(16px,4vw,40px);max-width:1240px;margin-left:auto;margin-right:auto}
+.dlux-w .dlux-pane-gap,[data-pane]{padding-top:4px}
+.dlux-tiers{gap:20px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.dlux-tier{padding:28px 24px;gap:10px}
+.dlux-tier h3{font-size:28px;line-height:1.1;word-break:normal;overflow-wrap:anywhere}
+.dlux-joinform{padding:28px clamp(18px,3vw,32px)!important;margin-top:28px}
+.dlux-joinform .dlux-grid2{gap:16px}
+.dlux-joinform .dlux-actions{margin-top:18px;gap:16px;align-items:center}
+.dlux-toggles{margin-bottom:24px}
+.dlux-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.dlux-pkg-f{margin:0;padding:0 0 0 18px;font-size:13px;color:var(--dx-mute);line-height:1.45}
+.dlux-main section .dlux-modes{margin:0}
+.dlux-modes .dlux-seg{background:var(--dx-pink)}
+.dlux-modes .dlux-seg button{color:#fff}
+.dlux-modes .dlux-seg button.on{background:#fff;color:var(--dx-pink-d)}
+
+/* ==========================================================================
+   DLUX dark theme (matches the website): black background, white text, pink buttons.
+   Uses the theme's colours and fonts when available.
+   ========================================================================== */
+.dlux-w{--dx-pink:var(--accent,#F43F5E);--dx-pink-d:var(--accent,#F43F5E);--dx-pink-l:rgba(244,63,94,.12);--dx-ink:#fff;--dx-mute:#B4B4BB;--dx-line:rgba(255,255,255,.14);--dx-sunk:var(--surface,#18181B);
+  color:#fff;font-family:var(--font-body,Barlow),"Segoe UI",system-ui,sans-serif}
+.dlux-w h2,.dlux-w h3{color:#fff}
+.dlux-w h2{font-family:var(--font-display,"Barlow Condensed"),"Arial Black",sans-serif;font-style:normal;font-weight:900}
+.dlux-w h3{font-family:var(--font-sub,"Barlow Condensed"),system-ui,sans-serif;font-size:22px;font-weight:600}
+.dlux-w h3 small{font-family:inherit;color:var(--dx-mute)}
+.dlux-w .dlux-card{background:var(--card,#050506);border:1px solid var(--dx-line);box-shadow:none;color:#fff}
+.dlux-w .dlux-steps li{background:var(--dx-sunk);color:var(--dx-mute);font-family:var(--font-sub,inherit)}
+.dlux-w .dlux-steps li.on{background:var(--dx-pink);color:#fff}
+.dlux-w .dlux-steps li.done{background:rgba(34,197,94,.15);color:#86EFAC}
+.dlux-w .dlux-pill,.dlux-w .dlux-chip,.dlux-w .dlux-slot,.dlux-w .dlux-day{background:var(--dx-sunk);border:1px solid var(--dx-line);color:#fff;font-family:var(--font-sub,inherit)}
+.dlux-w .dlux-pill:hover,.dlux-w .dlux-chip:hover,.dlux-w .dlux-slot:not(:disabled):hover,.dlux-w .dlux-day:hover{border-color:var(--dx-pink)}
+.dlux-w .dlux-pill.on,.dlux-w .dlux-chip.on,.dlux-w .dlux-slot.on,.dlux-w .dlux-day.on{background:var(--dx-pink);border-color:var(--dx-pink);color:#fff}
+.dlux-w .dlux-day small{color:inherit;opacity:.75}
+.dlux-w .dlux-slot:disabled{background:transparent;color:#6B6B73;border-style:dashed}
+.dlux-w .dlux-pkg{background:var(--dx-sunk);border:1px solid var(--dx-line);color:#fff}
+.dlux-w .dlux-pkg:hover{border-color:var(--dx-pink)}
+.dlux-w .dlux-pkg.on{border:2px solid var(--dx-pink);background:var(--dx-pink-l);box-shadow:none}
+.dlux-w .dlux-pkg.dlux-static:hover{border-color:var(--dx-line)}
+.dlux-w .dlux-pkg-n{font-family:var(--font-display,"Barlow Condensed"),sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;line-height:1.05}
+.dlux-w .dlux-pkg-p{font-family:var(--font-display,"Barlow Condensed"),sans-serif;font-size:26px;color:var(--dx-pink)}
+.dlux-w .dlux-pkg-d{color:var(--dx-mute)}
+.dlux-w .dlux-badge{background:#fff;color:#000;font-family:var(--font-sub,inherit)}
+.dlux-w .dlux-badge.pink{background:var(--dx-pink);color:#fff}
+.dlux-w .dlux-sum{background:var(--dx-sunk);border:1px solid var(--dx-line);color:#fff}
+.dlux-w .dlux-btn{background:var(--dx-pink);border-radius:999px;font-family:var(--font-sub,inherit);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:15px}
+.dlux-w .dlux-btn:hover{filter:brightness(.9);background:var(--dx-pink)}
+.dlux-w .dlux-btn:disabled{opacity:.45;filter:none}
+.dlux-w .dlux-btn-dark{background:#fff;color:#000!important}
+.dlux-w .dlux-btn-dark:hover{background:#E4E4E7;filter:none}
+.dlux-w .dlux-btn-line{background:transparent;color:#fff!important;border:1px solid var(--dx-pink)}
+.dlux-w .dlux-btn-line:hover{background:var(--dx-pink);filter:none}
+.dlux-w .dlux-link{color:var(--dx-pink)}
+.dlux-w .dlux-f span{color:#fff}
+.dlux-w .dlux-f input,.dlux-w .dlux-f select,.dlux-w .dlux-f textarea{background:var(--dx-sunk);border:1px solid var(--dx-line);color:#fff;font-family:var(--font-body,Barlow),sans-serif}
+.dlux-w .dlux-f input:focus,.dlux-w .dlux-f select:focus,.dlux-w .dlux-f textarea:focus{border-color:var(--dx-pink);outline:none}
+.dlux-w .dlux-f select option{background:var(--dx-sunk);color:#fff}
+.dlux-w .dlux-radio{border:1px solid var(--dx-line)}
+.dlux-w .dlux-radio.on{border:2px solid var(--dx-pink);background:var(--dx-pink-l)}
+.dlux-w .dlux-err{background:rgba(244,63,94,.12);color:#FECDD3;border:1px solid var(--dx-pink)}
+.dlux-w .dlux-note{background:rgba(251,191,36,.12);color:#FDE68A;border:1px solid rgba(251,191,36,.4)}
+.dlux-w .dlux-seg,.dlux-w .dlux-modes .dlux-seg{background:var(--dx-sunk);border:1px solid var(--dx-line)}
+.dlux-w .dlux-seg button,.dlux-w .dlux-modes .dlux-seg button{color:#fff;font-family:var(--font-sub,inherit)}
+.dlux-w .dlux-seg button.on,.dlux-w .dlux-modes .dlux-seg button.on{background:var(--dx-pink);color:#fff}
+.dlux-w .dlux-tier{background:var(--dx-sunk);border:1px solid var(--dx-line);color:#fff}
+.dlux-w .dlux-tier.best{background:var(--card,#050506);border:2px solid var(--dx-pink)}
+.dlux-w .dlux-opt.on{background:var(--dx-pink);border-color:var(--dx-pink)}
+.dlux-w hr,.dlux-w .dlux-row{border-color:var(--dx-line)}
+
+/* "Change" link next to a heading (when arriving with a package / size already chosen) */
+.dlux-change{margin-left:10px;padding:0;border:0;background:none;color:var(--dx-pink);font:600 14px/1 var(--font-sub,inherit);text-decoration:underline;text-underline-offset:3px;vertical-align:middle;cursor:pointer}
+.dlux-change:hover{text-decoration:none}
+/* Payment choice (card / pay at the shop) */
+.dlux-w button.dlux-radio{width:100%;text-align:left;background:transparent;color:inherit;margin-bottom:8px}
+.dlux-w button.dlux-radio:hover{border-color:var(--dx-pink)}
+.dlux-w .dlux-radio small{color:var(--dx-mute)}
+
