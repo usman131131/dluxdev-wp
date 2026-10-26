@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "read more"
+msgstr "läs mer"
+
+msgid "More reviews"
+msgstr "Fler recensioner"
+
+msgid "Top rated"
+msgstr "Toppbetyg"
+
+msgid "Latest review %s"
+msgstr "Senaste recensionen %s"
+
+msgid "%1 of the last %2 reviews are 5 stars"
+msgstr "%1 av de senaste %2 recensionerna har 5 stjärnor"
+
+msgid "%1 reviews on %2"
+msgstr "%1 recensioner på %2"
+
+msgid "%1 reviews"
+msgstr "%1 recensioner"
+
+msgid "%1 left %2 review"
+msgstr "%1 gav %2"
+
+msgid "%s place picture"
+msgstr "Bild på %s"
+
+msgid "%s place profile"
+msgstr "Platsprofil för %s"
+
+msgid "review us on"
+msgstr "Recensera oss på"
+
+msgid "review us on Google"
+msgstr "Recensera oss på Google"
+
+msgid "Rating: %s out of 5"
+msgstr "Betyg: %s av 5"
+
+msgid "Based on %s reviews"
+msgstr "Baserat på %s recensioner"
+
+msgid "powered by Google"
+msgstr "drivs av Google"
+
+msgid "See All Reviews"
+msgstr "Se alla recensioner"
+
+msgid "All reviews"
+msgstr "Alla recensioner"
+
+msgid "Google User"
+msgstr "Google-användare"
+
+msgid "%s profile picture"
+msgstr "Profilbild för %s"
+
+msgid "%s user profile"
+msgstr "Användarprofil för %s"
+
+msgid "Photo from customer review"
+msgstr "Foto från kundrecension"
+
+msgid "Response from the owner"
+msgstr "Svar från ägaren"
+
+msgid "opens in a new window"
+msgstr "öppnas i ett nytt fönster"
+
+msgid "Excellent"
+msgstr "Utmärkt"
+
+msgid "Great"
+msgstr "Mycket bra"
+
+msgid "Good"
+msgstr "Bra"
+
+msgid "Fair"
+msgstr "Godtagbart"
+
+msgid "Poor"
+msgstr "Dåligt"

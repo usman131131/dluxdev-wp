@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "read more"
+msgstr "читать далее"
+
+msgid "More reviews"
+msgstr "Ещё отзывы"
+
+msgid "Top rated"
+msgstr "Высокий рейтинг"
+
+msgid "Latest review %s"
+msgstr "Последний отзыв — %s"
+
+msgid "%1 of the last %2 reviews are 5 stars"
+msgstr "%1 из %2 последних отзывов — 5 звёзд"
+
+msgid "%1 reviews on %2"
+msgstr "Отзывов в %2: %1"
+
+msgid "%1 reviews"
+msgstr "Отзывов: %1"
+
+msgid "%1 left %2 review"
+msgstr "%1: отзыв %2"
+
+msgid "%s place picture"
+msgstr "Фото места %s"
+
+msgid "%s place profile"
+msgstr "Профиль места %s"
+
+msgid "review us on"
+msgstr "Оцените нас в"
+
+msgid "review us on Google"
+msgstr "Оцените нас в Google"
+
+msgid "Rating: %s out of 5"
+msgstr "Оценка: %s из 5"
+
+msgid "Based on %s reviews"
+msgstr "Основано на отзывах: %s"
+
+msgid "powered by Google"
+msgstr "Предоставлено Google"
+
+msgid "See All Reviews"
+msgstr "Смотреть все отзывы"
+
+msgid "All reviews"
+msgstr "Все отзывы"
+
+msgid "Google User"
+msgstr "Пользователь Google"
+
+msgid "%s profile picture"
+msgstr "Фото профиля %s"
+
+msgid "%s user profile"
+msgstr "Профиль пользователя %s"
+
+msgid "Photo from customer review"
+msgstr "Фото из отзыва клиента"
+
+msgid "Response from the owner"
+msgstr "Ответ владельца"
+
+msgid "opens in a new window"
+msgstr "открывается в новом окне"
+
+msgid "Excellent"
+msgstr "Отлично"
+
+msgid "Great"
+msgstr "Очень хорошо"
+
+msgid "Good"
+msgstr "Хорошо"
+
+msgid "Fair"
+msgstr "Удовлетворительно"
+
+msgid "Poor"
+msgstr "Плохо"

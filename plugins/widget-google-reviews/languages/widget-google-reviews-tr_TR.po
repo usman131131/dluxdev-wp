@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "read more"
+msgstr "devamı"
+
+msgid "More reviews"
+msgstr "Daha fazla yorum"
+
+msgid "Top rated"
+msgstr "Yüksek puanlı"
+
+msgid "Latest review %s"
+msgstr "Son yorum %s"
+
+msgid "%1 of the last %2 reviews are 5 stars"
+msgstr "Son %2 yorumdan %1 tanesi 5 yıldızlı"
+
+msgid "%1 reviews on %2"
+msgstr "%1 %2 yorumu"
+
+msgid "%1 reviews"
+msgstr "%1 yorum"
+
+msgid "%1 left %2 review"
+msgstr "%1 %2 yorum bıraktı"
+
+msgid "%s place picture"
+msgstr "%s işletme fotoğrafı"
+
+msgid "%s place profile"
+msgstr "%s işletme profili"
+
+msgid "review us on"
+msgstr "bizi değerlendirin"
+
+msgid "review us on Google"
+msgstr "bizi Google'da değerlendirin"
+
+msgid "Rating: %s out of 5"
+msgstr "Puan: 5 üzerinden %s"
+
+msgid "Based on %s reviews"
+msgstr "%s yoruma göre"
+
+msgid "powered by Google"
+msgstr "Google desteğiyle"
+
+msgid "See All Reviews"
+msgstr "Tüm yorumları gör"
+
+msgid "All reviews"
+msgstr "Tüm yorumlar"
+
+msgid "Google User"
+msgstr "Google kullanıcısı"
+
+msgid "%s profile picture"
+msgstr "%s profil fotoğrafı"
+
+msgid "%s user profile"
+msgstr "%s kullanıcı profili"
+
+msgid "Photo from customer review"
+msgstr "Müşteri yorumundan fotoğraf"
+
+msgid "Response from the owner"
+msgstr "İşletme sahibinin yanıtı"
+
+msgid "opens in a new window"
+msgstr "yeni pencerede açılır"
+
+msgid "Excellent"
+msgstr "Mükemmel"
+
+msgid "Great"
+msgstr "Çok iyi"
+
+msgid "Good"
+msgstr "İyi"
+
+msgid "Fair"
+msgstr "Orta"
+
+msgid "Poor"
+msgstr "Zayıf"

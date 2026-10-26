@@ -1,0 +1,3668 @@
+[
+    {
+        "key": "group_dlux_page_builder",
+        "title": "Page Builder",
+        "fields": [
+            {
+                "key": "field_dlux_page_sections",
+                "label": "Page Sections",
+                "name": "page_sections",
+                "aria-label": "",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "layout_dlux_hero": {
+                        "key": "layout_dlux_hero",
+                        "name": "hero",
+                        "label": "Hero",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_hero_t_content",
+                                "label": "Content",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0,
+                                "selected": 0
+                            },
+                            {
+                                "key": "field_dlux_hero_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Hand car wash & detailing, Yarraville",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_hero_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "Wrap words in <span>…</span> for accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Premium<br><span>Car Care</span><br>Made Simple",
+                                "rows": 3,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_hero_text",
+                                "label": "Description",
+                                "name": "description",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Professional hand car wash and detailing services designed to keep your vehicle clean, fresh and looking its best.",
+                                "rows": 3,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_hero_btn1",
+                                "label": "Primary Button",
+                                "name": "primary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_hero_btn2",
+                                "label": "Secondary Button",
+                                "name": "secondary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_hero_t_stats",
+                                "label": "Stats",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0,
+                                "selected": 0
+                            },
+                            {
+                                "key": "field_dlux_hero_stats",
+                                "label": "Stats",
+                                "name": "stats",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "button_label": "Add Stat",
+                                "collapsed": "",
+                                "min": 0,
+                                "max": 4,
+                                "pagination": 0,
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_hero_stat_title",
+                                        "label": "Title",
+                                        "name": "title",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_hero_stats"
+                                    },
+                                    {
+                                        "key": "field_dlux_hero_stat_sub",
+                                        "label": "Subtitle",
+                                        "name": "subtitle",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_hero_stats"
+                                    },
+                                    {
+                                        "key": "field_dlux_hero_stat_stars",
+                                        "label": "Show stars",
+                                        "name": "show_stars",
+                                        "aria-label": "",
+                                        "type": "true_false",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "20",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": 0,
+                                        "ui": 1,
+                                        "ui_on_text": "",
+                                        "ui_off_text": "",
+                                        "message": "",
+                                        "parent_repeater": "field_dlux_hero_stats"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_dlux_hero_t_media",
+                                "label": "Media",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0,
+                                "selected": 0
+                            },
+                            {
+                                "key": "field_dlux_hero_bg",
+                                "label": "Background Image",
+                                "name": "background_image",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "mime_types": "",
+                                "min_width": 0,
+                                "min_height": 0,
+                                "min_size": 0,
+                                "max_width": 0,
+                                "max_height": 0,
+                                "max_size": 0
+                            },
+                            {
+                                "key": "field_dlux_hero_overlay",
+                                "label": "Overlay opacity (%)",
+                                "name": "overlay_opacity",
+                                "aria-label": "",
+                                "type": "number",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": 60,
+                                "min": 0,
+                                "max": 100,
+                                "step": 5,
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_pricing": {
+                        "key": "layout_dlux_pricing",
+                        "name": "pricing",
+                        "label": "Pricing Packages",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_pr_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Prices",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_pr_anchor",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Used for menu links, e.g. prices → #prices",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_pr_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Choose your package",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_pr_note",
+                                "label": "Footnote",
+                                "name": "footnote",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Prices include GST. Not sure what your car needs? We'll check it on arrival and recommend the right package.",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_how_it_works": {
+                        "key": "layout_dlux_how_it_works",
+                        "name": "how_it_works",
+                        "label": "How It Works",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_hiw_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "How it works",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_hiw_anchor",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Used for menu links, e.g. prices → #prices",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_hiw_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Booked in a minute",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_hiw_btn",
+                                "label": "Button",
+                                "name": "button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_hiw_steps",
+                                "label": "Steps",
+                                "name": "steps",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "Step numbers (01, 02…) are generated automatically.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "button_label": "Add Step",
+                                "collapsed": "",
+                                "min": 0,
+                                "max": 0,
+                                "pagination": 0,
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_hiw_step_title",
+                                        "label": "Title",
+                                        "name": "title",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_hiw_steps"
+                                    },
+                                    {
+                                        "key": "field_dlux_hiw_step_text",
+                                        "label": "Text",
+                                        "name": "text",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "60",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "rows": 2,
+                                        "new_lines": "br",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "parent_repeater": "field_dlux_hiw_steps"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_services": {
+                        "key": "layout_dlux_services",
+                        "name": "services",
+                        "label": "Services Cards",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_svc_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Detailing & protection",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_svc_anchor",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Used for menu links, e.g. prices → #prices",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_svc_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Beyond the wash",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_svc_intro",
+                                "label": "Intro",
+                                "name": "intro",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "For bigger jobs we quote on the car, so you know the price before we start.",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_6ad1fa421c67a",
+                                "label": "Extra Heading",
+                                "name": "extra_heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "allow_in_bindings": 0,
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_6ad1fa4f1c67b",
+                                "label": "Extra Services",
+                                "name": "extra_services",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "",
+                                "button_label": "Add Row",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_6ad1fa671c67c",
+                                        "label": "Heading",
+                                        "name": "heading",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "allow_in_bindings": 0,
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_6ad1fa4f1c67b"
+                                    },
+                                    {
+                                        "key": "field_6ad1fa711c67d",
+                                        "label": "Description",
+                                        "name": "description",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "allow_in_bindings": 0,
+                                        "rows": "",
+                                        "placeholder": "",
+                                        "new_lines": "",
+                                        "parent_repeater": "field_6ad1fa4f1c67b"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_promo_cards": {
+                        "key": "layout_dlux_promo_cards",
+                        "name": "promo_cards",
+                        "label": "Promo Cards (Memberships / Gift Vouchers)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_promo_anchor",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_promo_cards",
+                                "label": "Cards",
+                                "name": "cards",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "button_label": "Add Card",
+                                "collapsed": "",
+                                "min": 0,
+                                "max": 2,
+                                "pagination": 0,
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_promo_style",
+                                        "label": "Style",
+                                        "name": "style",
+                                        "aria-label": "",
+                                        "type": "select",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "30",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "accent": "Accent (red)",
+                                            "dark": "Dark"
+                                        },
+                                        "default_value": "accent",
+                                        "return_format": "value",
+                                        "multiple": 0,
+                                        "allow_null": 0,
+                                        "ui": 0,
+                                        "ajax": 0,
+                                        "placeholder": "",
+                                        "create_options": 0,
+                                        "save_options": 0,
+                                        "parent_repeater": "field_dlux_promo_cards"
+                                    },
+                                    {
+                                        "key": "field_dlux_promo_label",
+                                        "label": "Label",
+                                        "name": "label",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "70",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_promo_cards"
+                                    },
+                                    {
+                                        "key": "field_dlux_promo_heading",
+                                        "label": "Heading",
+                                        "name": "heading",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "rows": 2,
+                                        "new_lines": "br",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "parent_repeater": "field_dlux_promo_cards"
+                                    },
+                                    {
+                                        "key": "field_dlux_promo_text",
+                                        "label": "Text",
+                                        "name": "text",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "rows": 3,
+                                        "new_lines": "br",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "parent_repeater": "field_dlux_promo_cards"
+                                    },
+                                    {
+                                        "key": "field_dlux_promo_btn",
+                                        "label": "Button",
+                                        "name": "button",
+                                        "aria-label": "",
+                                        "type": "link",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "parent_repeater": "field_dlux_promo_cards"
+                                    },
+                                    {
+                                        "key": "field_dlux_promo_btn_pos",
+                                        "label": "Button position",
+                                        "name": "button_position",
+                                        "aria-label": "",
+                                        "type": "select",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "20",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "top": "Top right",
+                                            "bottom": "Below text"
+                                        },
+                                        "default_value": "bottom",
+                                        "return_format": "value",
+                                        "multiple": 0,
+                                        "allow_null": 0,
+                                        "ui": 0,
+                                        "ajax": 0,
+                                        "placeholder": "",
+                                        "create_options": 0,
+                                        "save_options": 0,
+                                        "parent_repeater": "field_dlux_promo_cards"
+                                    },
+                                    {
+                                        "key": "field_dlux_promo_img",
+                                        "label": "Image (optional)",
+                                        "name": "image",
+                                        "aria-label": "",
+                                        "type": "image",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "preview_size": "medium",
+                                        "library": "all",
+                                        "mime_types": "",
+                                        "min_width": 0,
+                                        "min_height": 0,
+                                        "min_size": 0,
+                                        "max_width": 0,
+                                        "max_height": 0,
+                                        "max_size": 0,
+                                        "parent_repeater": "field_dlux_promo_cards"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_reviews": {
+                        "key": "layout_dlux_reviews",
+                        "name": "reviews",
+                        "label": "Reviews",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_rev_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Reviews",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_rev_anchor",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Used for menu links, e.g. prices → #prices",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_rev_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Trusted since 2010",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_rev_btn",
+                                "label": "Button",
+                                "name": "button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "Leave empty to use the Google Reviews URL from Theme Settings.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_rev_items",
+                                "label": "Reviews",
+                                "name": "reviews",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "button_label": "Add Review",
+                                "collapsed": "",
+                                "min": 0,
+                                "max": 0,
+                                "pagination": 0,
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_rev_name",
+                                        "label": "Name",
+                                        "name": "name",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_rev_items"
+                                    },
+                                    {
+                                        "key": "field_dlux_rev_rating",
+                                        "label": "Rating",
+                                        "name": "rating",
+                                        "aria-label": "",
+                                        "type": "number",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "20",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": 5,
+                                        "min": 1,
+                                        "max": 5,
+                                        "step": 1,
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_rev_items"
+                                    },
+                                    {
+                                        "key": "field_dlux_rev_text",
+                                        "label": "Review",
+                                        "name": "text",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "rows": 2,
+                                        "new_lines": "br",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "parent_repeater": "field_dlux_rev_items"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_locations": {
+                        "key": "layout_dlux_locations",
+                        "name": "locations",
+                        "label": "Visit Us / Locations",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_loc_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Visit us",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_loc_anchor",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Used for menu links, e.g. prices → #prices",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_loc_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "DLUX Yarraville",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_loc_text",
+                                "label": "Text",
+                                "name": "text",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Choose your preferred DLUX location and book your next service.",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_loc_show_global",
+                                "label": "Show locations from Theme Settings",
+                                "name": "show_locations",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": 1,
+                                "ui": 1,
+                                "ui_on_text": "",
+                                "ui_off_text": "",
+                                "message": ""
+                            },
+                            {
+                                "key": "field_dlux_loc_map",
+                                "label": "Map embed (iframe)",
+                                "name": "map_embed",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "Leave empty to use the default map from Theme Settings.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "rows": 3,
+                                "new_lines": "",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_loc_btn1",
+                                "label": "Primary Button",
+                                "name": "primary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_loc_btn2",
+                                "label": "Secondary Button",
+                                "name": "secondary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_cta_banner": {
+                        "key": "layout_dlux_cta_banner",
+                        "name": "cta_banner",
+                        "label": "CTA Banner",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_cta_anchor",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_cta_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Ready for the DLUX treatment?",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_cta_text",
+                                "label": "Text",
+                                "name": "text",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Choose your service, pick your preferred time and leave the rest to us.",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_cta_btn",
+                                "label": "Button",
+                                "name": "button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_cta_bg",
+                                "label": "Background Image",
+                                "name": "background_image",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "mime_types": "",
+                                "min_width": 0,
+                                "min_height": 0,
+                                "min_size": 0,
+                                "max_width": 0,
+                                "max_height": 0,
+                                "max_size": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_6ad0bcd0e4b47": {
+                        "key": "layout_6ad0bcd0e4b47",
+                        "name": "content_body",
+                        "label": "Content Body",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_6ad0bcdbe4b49",
+                                "label": "Editor",
+                                "name": "editor",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "allow_in_bindings": 0,
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_contact_us": {
+                        "key": "layout_dlux_contact_us",
+                        "name": "contact_us",
+                        "label": "Contact Us",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_ct_t_details",
+                                "label": "Details",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0,
+                                "selected": 0
+                            },
+                            {
+                                "key": "field_dlux_ct_section_id",
+                                "label": "Section ID (anchor)",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "contact",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_ct_show_logo",
+                                "label": "Show logo",
+                                "name": "show_logo",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": 1,
+                                "ui": 1,
+                                "ui_on_text": "",
+                                "ui_off_text": "",
+                                "message": ""
+                            },
+                            {
+                                "key": "field_dlux_ct_show_socials",
+                                "label": "Show social links",
+                                "name": "show_socials",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "Uses the social links from Theme Settings.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": 1,
+                                "ui": 1,
+                                "ui_on_text": "",
+                                "ui_off_text": "",
+                                "message": ""
+                            },
+                            {
+                                "key": "field_dlux_ct_tagline",
+                                "label": "Tagline",
+                                "name": "tagline",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Automotive purification studio based in Yarraville.",
+                                "rows": 2,
+                                "new_lines": "br",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_ct_items",
+                                "label": "Contact details",
+                                "name": "contact_items",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "Leave empty to use the address, email and phone from Theme Settings.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "pagination": 0,
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "",
+                                "button_label": "Add Detail",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_ct_item_icon",
+                                        "label": "Icon",
+                                        "name": "icon",
+                                        "aria-label": "",
+                                        "type": "select",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "20",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "location": "Location",
+                                            "email": "Email",
+                                            "message": "Message / Text",
+                                            "phone": "Phone",
+                                            "clock": "Hours"
+                                        },
+                                        "default_value": "location",
+                                        "return_format": "value",
+                                        "multiple": 0,
+                                        "allow_null": 0,
+                                        "ui": 0,
+                                        "ajax": 0,
+                                        "placeholder": "",
+                                        "create_options": 0,
+                                        "save_options": 0,
+                                        "allow_custom": 0,
+                                        "search_placeholder": "",
+                                        "parent_repeater": "field_dlux_ct_items"
+                                    },
+                                    {
+                                        "key": "field_dlux_ct_item_label",
+                                        "label": "Label",
+                                        "name": "label",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "25",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "Visit us",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_ct_items"
+                                    },
+                                    {
+                                        "key": "field_dlux_ct_item_value",
+                                        "label": "Value",
+                                        "name": "value",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "30",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "321–325 Williamstown Rd",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_ct_items"
+                                    },
+                                    {
+                                        "key": "field_dlux_ct_item_link",
+                                        "label": "Link (optional)",
+                                        "name": "link",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "25",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "mailto:, tel:, sms: or https://",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_dlux_ct_items"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_dlux_ct_t_form",
+                                "label": "Form",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0,
+                                "selected": 0
+                            },
+                            {
+                                "key": "field_dlux_ct_form_heading",
+                                "label": "Form heading",
+                                "name": "form_heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Send a Message",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_ct_button_text",
+                                "label": "Button text",
+                                "name": "button_text",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Send Request",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_ct_services",
+                                "label": "Service options",
+                                "name": "service_options",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "One per line. Leave empty to list the packages from the Dlux Booking plugin.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "rows": 4,
+                                "new_lines": "",
+                                "placeholder": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_ct_success",
+                                "label": "Success message",
+                                "name": "success_message",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Thanks! Your message has been sent – we'll be in touch soon.",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_split_hero": {
+                        "key": "layout_dlux_split_hero",
+                        "name": "split_hero",
+                        "label": "Split hero (text + image)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_split_hero_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_split_hero_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "70",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Detailing · Yarraville · Trusted since {since}",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_split_hero_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Bring it back to <span>showroom</span>",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_split_hero_text",
+                                "label": "Text",
+                                "name": "text",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "rows": 3,
+                                "new_lines": "",
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_dlux_split_hero_primary_button",
+                                "label": "Primary button",
+                                "name": "primary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_split_hero_secondary_button",
+                                "label": "Secondary button",
+                                "name": "secondary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_split_hero_image",
+                                "label": "Image",
+                                "name": "image",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "Shown on the right. Leave empty for text only.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "min_width": 0,
+                                "min_height": 0,
+                                "min_size": 0,
+                                "max_width": 0,
+                                "max_height": 0,
+                                "max_size": 0,
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_dlux_split_hero_highlights",
+                                "label": "Highlights strip",
+                                "name": "highlights",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "Optional accent-coloured strip under the hero, e.g. \"Detailing since 2010\".",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "button_label": "Add highlight",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "field_dlux_split_hero_highlight_text",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_split_hero_highlight_text",
+                                        "label": "Text",
+                                        "name": "text",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_split_hero_highlights",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_detail_packages": {
+                        "key": "layout_dlux_detail_packages",
+                        "name": "detail_packages",
+                        "label": "Detailing packages (from Booking Prices)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_detail_packages_msg",
+                                "label": "",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "message",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "Packages, prices, vehicle sizes, card images and the \"What's included\" panel come from <strong>Theme Settings › Booking Prices</strong>. Only packages with at least one price are shown.",
+                                "esc_html": 0,
+                                "new_lines": "wpautop"
+                            },
+                            {
+                                "key": "field_dlux_detail_packages_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_detail_packages_service",
+                                "label": "Packages from",
+                                "name": "service",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "detail": "Detailing tab",
+                                    "wash": "Wash packages tab"
+                                },
+                                "default_value": "detail",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": "",
+                                "create_options": 0,
+                                "save_options": 0
+                            },
+                            {
+                                "key": "field_dlux_detail_packages_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "40",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Detailing packages",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_detail_packages_intro",
+                                "label": "Intro",
+                                "name": "intro",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "rows": 2,
+                                "new_lines": "",
+                                "placeholder": "Pick your vehicle size to see prices. Tap a package for everything that’s included.",
+                                "default_value": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_dlux_detail_packages_empty_text",
+                                "label": "Text when no packages",
+                                "name": "empty_text",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional. If empty, the section is hidden when there are no packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_gallery": {
+                        "key": "layout_dlux_gallery",
+                        "name": "gallery",
+                        "label": "Our work (before / after gallery)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_gallery_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_gallery_background",
+                                "label": "Background",
+                                "name": "background",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "light": "Light",
+                                    "dark": "Dark"
+                                },
+                                "default_value": "light",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": "",
+                                "create_options": 0,
+                                "save_options": 0
+                            },
+                            {
+                                "key": "field_dlux_gallery_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "40",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Our work",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_gallery_intro",
+                                "label": "Intro",
+                                "name": "intro",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Real cars, detailed at Dlux.",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_gallery_items",
+                                "label": "Items",
+                                "name": "items",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "button_label": "Add item",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "field_dlux_gallery_label",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_gallery_label",
+                                        "label": "Caption",
+                                        "name": "label",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_gallery_items",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_gallery_before_image",
+                                        "label": "Before image",
+                                        "name": "before_image",
+                                        "aria-label": "",
+                                        "type": "image",
+                                        "instructions": "With both images the tile is split Before | After.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "30",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "preview_size": "medium",
+                                        "library": "all",
+                                        "parent_repeater": "field_dlux_gallery_items",
+                                        "min_width": 0,
+                                        "min_height": 0,
+                                        "min_size": 0,
+                                        "max_width": 0,
+                                        "max_height": 0,
+                                        "max_size": 0,
+                                        "mime_types": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_gallery_after_image",
+                                        "label": "After image",
+                                        "name": "after_image",
+                                        "aria-label": "",
+                                        "type": "image",
+                                        "instructions": "Leave empty for a single image.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "30",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "preview_size": "medium",
+                                        "library": "all",
+                                        "parent_repeater": "field_dlux_gallery_items",
+                                        "min_width": 0,
+                                        "min_height": 0,
+                                        "min_size": 0,
+                                        "max_width": 0,
+                                        "max_height": 0,
+                                        "max_size": 0,
+                                        "mime_types": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_service_cards": {
+                        "key": "layout_dlux_service_cards",
+                        "name": "service_cards",
+                        "label": "Service cards (Ceramic coating, PPF…)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_service_cards_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_service_cards_title_style",
+                                "label": "Heading style",
+                                "name": "title_style",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "standard": "Standard",
+                                    "large": "Large italic"
+                                },
+                                "default_value": "standard",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": "",
+                                "create_options": 0,
+                                "save_options": 0
+                            },
+                            {
+                                "key": "field_dlux_service_cards_logo",
+                                "label": "Partner logo",
+                                "name": "logo",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "Optional, shown above the heading.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "40",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "min_width": 0,
+                                "min_height": 0,
+                                "min_size": 0,
+                                "max_width": 0,
+                                "max_height": 0,
+                                "max_size": 0,
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_dlux_service_cards_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Protection studio · Truganina",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_service_cards_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_service_cards_text",
+                                "label": "Text",
+                                "name": "text",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "rows": 3,
+                                "new_lines": "",
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_dlux_service_cards_cards",
+                                "label": "Cards",
+                                "name": "cards",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "button_label": "Add card",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "field_dlux_service_cards_card_title",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_service_cards_card_title",
+                                        "label": "Title",
+                                        "name": "title",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_service_cards_cards",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_service_cards_card_image",
+                                        "label": "Image",
+                                        "name": "image",
+                                        "aria-label": "",
+                                        "type": "image",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "preview_size": "medium",
+                                        "library": "all",
+                                        "parent_repeater": "field_dlux_service_cards_cards",
+                                        "min_width": 0,
+                                        "min_height": 0,
+                                        "min_size": 0,
+                                        "max_width": 0,
+                                        "max_height": 0,
+                                        "max_size": 0,
+                                        "mime_types": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_service_cards_card_text",
+                                        "label": "Text",
+                                        "name": "text",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "rows": 2,
+                                        "new_lines": "",
+                                        "parent_repeater": "field_dlux_service_cards_cards",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_service_cards_price_label",
+                                        "label": "Price label",
+                                        "name": "price_label",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "30",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "placeholder": "Starting from",
+                                        "parent_repeater": "field_dlux_service_cards_cards",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_service_cards_price",
+                                        "label": "Price",
+                                        "name": "price",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "Number (e.g. 899) or text.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "30",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_service_cards_cards",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_service_cards_price_note",
+                                        "label": "Note",
+                                        "name": "price_note",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "40",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "placeholder": "Price on inquiry",
+                                        "parent_repeater": "field_dlux_service_cards_cards",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_dlux_service_cards_primary_button",
+                                "label": "Primary button",
+                                "name": "primary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_service_cards_secondary_button",
+                                "label": "Secondary button",
+                                "name": "secondary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_service_cards_footnote",
+                                "label": "Footnote",
+                                "name": "footnote",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "Optional, e.g. \"Coming soon: graphene coating.\"",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "tabs": "all",
+                                "toolbar": "basic",
+                                "media_upload": 0,
+                                "delay": 0,
+                                "default_value": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_info_tabs": {
+                        "key": "layout_dlux_info_tabs",
+                        "name": "info_tabs",
+                        "label": "Info tabs (guide)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_info_tabs_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_info_tabs_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "70",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "The full guide",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_info_tabs_heading",
+                                "label": "Heading (default)",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Used for any tab without its own heading. Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Ceramic & graphene coatings explained",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_info_tabs_summary_heading",
+                                "label": "Summary heading (default)",
+                                "name": "summary_heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Used for any tab without its own summary.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Which one is right for me?",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_info_tabs_summary_text",
+                                "label": "Summary text (default)",
+                                "name": "summary_text",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "tabs": "all",
+                                "toolbar": "basic",
+                                "media_upload": 0,
+                                "delay": 0,
+                                "default_value": ""
+                            },
+                            {
+                                "key": "field_dlux_info_tabs_tabs",
+                                "label": "Tabs",
+                                "name": "tabs",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "Each tab has its own heading, intro, cards and summary. With one tab the tab buttons are hidden.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "button_label": "Add tab",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "field_dlux_info_tabs_tab_label",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_info_tabs_tab_label",
+                                        "label": "Tab label",
+                                        "name": "label",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "placeholder": "Ceramic coating",
+                                        "parent_repeater": "field_dlux_info_tabs_tabs",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_info_tabs_tab_badge",
+                                        "label": "Badge",
+                                        "name": "badge",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "placeholder": "Available now",
+                                        "parent_repeater": "field_dlux_info_tabs_tabs",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_info_tabs_tab_heading",
+                                        "label": "Heading",
+                                        "name": "heading",
+                                        "type": "text",
+                                        "instructions": "Optional. Replaces the section heading while this tab is open. Wrap words in <span>…</span> to show them in the accent colour.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_info_tabs_tabs"
+                                    },
+                                    {
+                                        "key": "field_dlux_info_tabs_tab_intro",
+                                        "label": "Intro",
+                                        "name": "intro",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "rows": 2,
+                                        "new_lines": "",
+                                        "parent_repeater": "field_dlux_info_tabs_tabs",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_info_tabs_tab_cards",
+                                        "label": "Cards",
+                                        "name": "cards",
+                                        "aria-label": "",
+                                        "type": "repeater",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "layout": "block",
+                                        "button_label": "Add card",
+                                        "min": 0,
+                                        "max": 0,
+                                        "parent_repeater": "field_dlux_info_tabs_tabs",
+                                        "collapsed": "field_dlux_info_tabs_tc_title",
+                                        "rows_per_page": 20,
+                                        "sub_fields": [
+                                            {
+                                                "key": "field_dlux_info_tabs_tc_title",
+                                                "label": "Title",
+                                                "name": "title",
+                                                "aria-label": "",
+                                                "type": "text",
+                                                "instructions": "",
+                                                "required": 1,
+                                                "conditional_logic": 0,
+                                                "wrapper": {
+                                                    "width": "",
+                                                    "class": "",
+                                                    "id": ""
+                                                },
+                                                "parent_repeater": "field_dlux_info_tabs_tab_cards",
+                                                "default_value": "",
+                                                "maxlength": "",
+                                                "placeholder": "",
+                                                "prepend": "",
+                                                "append": ""
+                                            },
+                                            {
+                                                "key": "field_dlux_info_tabs_tc_text",
+                                                "label": "Text",
+                                                "name": "text",
+                                                "aria-label": "",
+                                                "type": "textarea",
+                                                "instructions": "",
+                                                "required": 0,
+                                                "conditional_logic": 0,
+                                                "wrapper": {
+                                                    "width": "",
+                                                    "class": "",
+                                                    "id": ""
+                                                },
+                                                "rows": 2,
+                                                "new_lines": "",
+                                                "parent_repeater": "field_dlux_info_tabs_tab_cards",
+                                                "default_value": "",
+                                                "maxlength": "",
+                                                "placeholder": ""
+                                            },
+                                            {
+                                                "key": "field_dlux_info_tabs_tc_list",
+                                                "label": "Ticked list",
+                                                "name": "list",
+                                                "aria-label": "",
+                                                "type": "textarea",
+                                                "instructions": "Optional. One item per line.",
+                                                "required": 0,
+                                                "conditional_logic": 0,
+                                                "wrapper": {
+                                                    "width": "",
+                                                    "class": "",
+                                                    "id": ""
+                                                },
+                                                "rows": 4,
+                                                "new_lines": "",
+                                                "parent_repeater": "field_dlux_info_tabs_tab_cards",
+                                                "default_value": "",
+                                                "maxlength": "",
+                                                "placeholder": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "key": "field_dlux_info_tabs_tab_summary_heading",
+                                        "label": "Summary heading",
+                                        "name": "summary_heading",
+                                        "type": "text",
+                                        "instructions": "Optional. Replaces the default summary for this tab.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "placeholder": "Which one is right for me?",
+                                        "parent_repeater": "field_dlux_info_tabs_tabs"
+                                    },
+                                    {
+                                        "key": "field_dlux_info_tabs_tab_summary_text",
+                                        "label": "Summary text",
+                                        "name": "summary_text",
+                                        "type": "wysiwyg",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "tabs": "all",
+                                        "toolbar": "basic",
+                                        "media_upload": 0,
+                                        "delay": 0,
+                                        "parent_repeater": "field_dlux_info_tabs_tabs"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_process_steps": {
+                        "key": "layout_dlux_process_steps",
+                        "name": "process_steps",
+                        "label": "How it works – numbered cards",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_process_steps_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_process_steps_background",
+                                "label": "Background",
+                                "name": "background",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "light": "White",
+                                    "grey": "Light grey",
+                                    "dark": "Dark"
+                                },
+                                "default_value": "light",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": "",
+                                "create_options": 0,
+                                "save_options": 0
+                            },
+                            {
+                                "key": "field_dlux_process_steps_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "40",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "How it works",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_process_steps_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Booked in a minute",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_process_steps_steps",
+                                "label": "Steps",
+                                "name": "steps",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "Step numbers (01, 02…) are added automatically.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "button_label": "Add step",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "field_dlux_process_steps_step_title",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_process_steps_step_title",
+                                        "label": "Title",
+                                        "name": "title",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "35",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_process_steps_steps",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_process_steps_step_text",
+                                        "label": "Text",
+                                        "name": "text",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "65",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "rows": 2,
+                                        "new_lines": "",
+                                        "parent_repeater": "field_dlux_process_steps_steps",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_dlux_process_steps_button",
+                                "label": "Button",
+                                "name": "button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_faq": {
+                        "key": "layout_dlux_faq",
+                        "name": "faq",
+                        "label": "FAQ (questions accordion)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_faq_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_faq_background",
+                                "label": "Background",
+                                "name": "background",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "light": "White",
+                                    "grey": "Light grey",
+                                    "dark": "Dark"
+                                },
+                                "default_value": "grey",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": "",
+                                "create_options": 0,
+                                "save_options": 0
+                            },
+                            {
+                                "key": "field_dlux_faq_eyebrow",
+                                "label": "Eyebrow",
+                                "name": "eyebrow",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "40",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_faq_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Questions",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_faq_items",
+                                "label": "Questions",
+                                "name": "items",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "button_label": "Add question",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "field_dlux_faq_question",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_faq_question",
+                                        "label": "Question",
+                                        "name": "question",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_faq_items",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_faq_answer",
+                                        "label": "Answer",
+                                        "name": "answer",
+                                        "aria-label": "",
+                                        "type": "wysiwyg",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "tabs": "all",
+                                        "toolbar": "basic",
+                                        "media_upload": 0,
+                                        "delay": 0,
+                                        "parent_repeater": "field_dlux_faq_items",
+                                        "default_value": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_dlux_faq_add_schema",
+                                "label": "Add FAQ schema for Google",
+                                "name": "add_schema",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "Adds FAQPage structured data. Use it on one FAQ section per page.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "ui": 1,
+                                "default_value": 1,
+                                "message": "",
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_addons_grid": {
+                        "key": "layout_dlux_addons_grid",
+                        "name": "addons_grid",
+                        "label": "Add-ons grid (Add to your detail)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_addons_grid_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_addons_grid_background",
+                                "label": "Background",
+                                "name": "background",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "light": "White",
+                                    "grey": "Light grey",
+                                    "dark": "Dark"
+                                },
+                                "default_value": "grey",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": "",
+                                "create_options": 0,
+                                "save_options": 0
+                            },
+                            {
+                                "key": "field_dlux_addons_grid_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "40",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Add to your detail",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_addons_grid_intro",
+                                "label": "Intro",
+                                "name": "intro",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Prices from. Add them when you book, or ask on the day.",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_addons_grid_items",
+                                "label": "Add-ons",
+                                "name": "items",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "table",
+                                "button_label": "Add add-on",
+                                "min": 0,
+                                "max": 0,
+                                "collapsed": "field_dlux_addons_grid_addon_name",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_dlux_addons_grid_addon_name",
+                                        "label": "Name",
+                                        "name": "name",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "35",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_addons_grid_items",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_addons_grid_addon_price",
+                                        "label": "Price",
+                                        "name": "price",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "Number (e.g. 80) or text.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "15",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "parent_repeater": "field_dlux_addons_grid_items",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_dlux_addons_grid_addon_text",
+                                        "label": "Description",
+                                        "name": "text",
+                                        "aria-label": "",
+                                        "type": "textarea",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "rows": 2,
+                                        "new_lines": "",
+                                        "parent_repeater": "field_dlux_addons_grid_items",
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_dlux_cta_strip": {
+                        "key": "layout_dlux_cta_strip",
+                        "name": "cta_strip",
+                        "label": "CTA strip (heading + 2 buttons)",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_dlux_cta_strip_section_id",
+                                "label": "Section ID",
+                                "name": "section_id",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional anchor, e.g. \"packages\" → /#packages.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_cta_strip_background",
+                                "label": "Background",
+                                "name": "background",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "accent": "Accent (pink)",
+                                    "dark": "Dark"
+                                },
+                                "default_value": "accent",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "return_format": "value",
+                                "ajax": 0,
+                                "placeholder": "",
+                                "create_options": 0,
+                                "save_options": 0
+                            },
+                            {
+                                "key": "field_dlux_cta_strip_heading",
+                                "label": "Heading",
+                                "name": "heading",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Wrap words in <span>…</span> to show them in the accent colour.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placeholder": "Ready to see your car shine?",
+                                "default_value": "",
+                                "maxlength": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_cta_strip_text",
+                                "label": "Text",
+                                "name": "text",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Optional line under the heading.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_dlux_cta_strip_primary_button",
+                                "label": "Primary button",
+                                "name": "primary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "Dark button.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            },
+                            {
+                                "key": "field_dlux_cta_strip_secondary_button",
+                                "label": "Secondary button",
+                                "name": "secondary_button",
+                                "aria-label": "",
+                                "type": "link",
+                                "instructions": "White button, e.g. a tel: link.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array"
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "min": "",
+                "max": "",
+                "button_label": "Add Section"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": true,
+        "description": "Flexible content sections for pages",
+        "show_in_rest": 0,
+        "display_title": "",
+        "allow_ai_access": false,
+        "ai_description": "",
+        "modified": 1793020264
+    }
+]

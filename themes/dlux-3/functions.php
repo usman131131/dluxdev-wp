@@ -14,6 +14,14 @@ require DLUX_DIR . '/inc/icons.php';
 require DLUX_DIR . '/inc/booking.php';
 require DLUX_DIR . '/inc/contact.php';
 require DLUX_DIR . '/inc/voucher-popup.php';
+require DLUX_DIR . '/inc/showcase.php';
+require DLUX_DIR . '/inc/svg.php';
+
+/* ---------- Classic editor (posts, pages and widgets) ---------- */
+add_filter('use_block_editor_for_post', '__return_false', 100);
+add_filter('use_block_editor_for_post_type', '__return_false', 100);
+add_filter('use_widgets_block_editor', '__return_false');
+add_filter('gutenberg_use_widgets_block_editor', '__return_false');
 
 /* ---------- Theme setup ---------- */
 add_action('after_setup_theme', function () {
@@ -122,6 +130,20 @@ add_action('wp_enqueue_scripts', function () {
 		'success' => __('Thanks! Your message has been sent.', 'dlux'),
 		'error'   => __('Sorry, something went wrong. Please try again or contact us directly.', 'dlux'),
 	]);
+}, 20);
+
+/* ---------- Detailing packages toggle + Info tabs – only on pages with those sections ---------- */
+add_action('wp_enqueue_scripts', function () {
+	if (!dlux_page_has_layout('detail_packages') && !dlux_page_has_layout('info_tabs')) return;
+
+	$path = get_stylesheet_directory() . '/assets/js/sections.js';
+	wp_enqueue_script(
+		'dlux-sections',
+		DLUX_URI . '/assets/js/sections.js',
+		[],
+		file_exists($path) ? filemtime($path) : DLUX_VERSION,
+		true
+	);
 }, 20);
 
 /* Preload the two most-used local fonts (heading + paragraph) */

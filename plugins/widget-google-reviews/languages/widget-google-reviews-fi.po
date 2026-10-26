@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "read more"
+msgstr "lue lisää"
+
+msgid "More reviews"
+msgstr "Lisää arvosteluja"
+
+msgid "Top rated"
+msgstr "Huippuarvioitu"
+
+msgid "Latest review %s"
+msgstr "Uusin arvostelu %s"
+
+msgid "%1 of the last %2 reviews are 5 stars"
+msgstr "%1/%2 viimeisestä arvostelusta antaa 5 tähteä"
+
+msgid "%1 reviews on %2"
+msgstr "%1 %2-arvostelua"
+
+msgid "%1 reviews"
+msgstr "%1 arvostelua"
+
+msgid "%1 left %2 review"
+msgstr "%1 antoi %2"
+
+msgid "%s place picture"
+msgstr "Paikan %s kuva"
+
+msgid "%s place profile"
+msgstr "Paikan %s profiili"
+
+msgid "review us on"
+msgstr "Arvioi meidät"
+
+msgid "review us on Google"
+msgstr "Arvioi meidät Googlessa"
+
+msgid "Rating: %s out of 5"
+msgstr "Arvosana: %s/5"
+
+msgid "Based on %s reviews"
+msgstr "Perustuu %s arvosteluun"
+
+msgid "powered by Google"
+msgstr "Palvelun tarjoaa Google"
+
+msgid "See All Reviews"
+msgstr "Näytä kaikki arvostelut"
+
+msgid "All reviews"
+msgstr "Kaikki arvostelut"
+
+msgid "Google User"
+msgstr "Google-käyttäjä"
+
+msgid "%s profile picture"
+msgstr "Käyttäjän %s profiilikuva"
+
+msgid "%s user profile"
+msgstr "Käyttäjän %s profiili"
+
+msgid "Photo from customer review"
+msgstr "Kuva asiakkaan arvostelusta"
+
+msgid "Response from the owner"
+msgstr "Omistajan vastaus"
+
+msgid "opens in a new window"
+msgstr "avautuu uudessa ikkunassa"
+
+msgid "Excellent"
+msgstr "Erinomainen"
+
+msgid "Great"
+msgstr "Erittäin hyvä"
+
+msgid "Good"
+msgstr "Hyvä"
+
+msgid "Fair"
+msgstr "Kohtalainen"
+
+msgid "Poor"
+msgstr "Huono"

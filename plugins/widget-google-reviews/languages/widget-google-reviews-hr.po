@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "read more"
+msgstr "više"
+
+msgid "More reviews"
+msgstr "Više recenzija"
+
+msgid "Top rated"
+msgstr "Vrhunska ocjena"
+
+msgid "Latest review %s"
+msgstr "Zadnja recenzija %s"
+
+msgid "%1 of the last %2 reviews are 5 stars"
+msgstr "%1 od zadnjih %2 recenzija ima 5 zvjezdica"
+
+msgid "%1 reviews on %2"
+msgstr "%1 %2 recenzija"
+
+msgid "%1 reviews"
+msgstr "%1 recenzija"
+
+msgid "%1 left %2 review"
+msgstr "%1 ostavlja recenziju %2"
+
+msgid "%s place picture"
+msgstr "Fotografija mjesta %s"
+
+msgid "%s place profile"
+msgstr "Profil mjesta %s"
+
+msgid "review us on"
+msgstr "ocijenite nas na"
+
+msgid "review us on Google"
+msgstr "ocijenite nas na Googleu"
+
+msgid "Rating: %s out of 5"
+msgstr "Ocjena: %s od 5"
+
+msgid "Based on %s reviews"
+msgstr "Na temelju %s recenzija"
+
+msgid "powered by Google"
+msgstr "omogućuje Google"
+
+msgid "See All Reviews"
+msgstr "Pogledajte sve recenzije"
+
+msgid "All reviews"
+msgstr "Sve recenzije"
+
+msgid "Google User"
+msgstr "Google korisnik"
+
+msgid "%s profile picture"
+msgstr "Profilna slika korisnika %s"
+
+msgid "%s user profile"
+msgstr "Profil korisnika %s"
+
+msgid "Photo from customer review"
+msgstr "Fotografija iz recenzije kupca"
+
+msgid "Response from the owner"
+msgstr "Odgovor vlasnika"
+
+msgid "opens in a new window"
+msgstr "otvara se u novom prozoru"
+
+msgid "Excellent"
+msgstr "Izvrsno"
+
+msgid "Great"
+msgstr "Vrlo dobro"
+
+msgid "Good"
+msgstr "Dobro"
+
+msgid "Fair"
+msgstr "Zadovoljavajuće"
+
+msgid "Poor"
+msgstr "Loše"

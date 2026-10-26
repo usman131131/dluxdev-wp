@@ -1,0 +1,42 @@
+# Exclude all plugins by default
+/plugins/*
+
+# Include only my custom plugin
+!/plugins/dlux-booking/
+
+# Keep the plugin's contents tracked
+!/plugins/dlux-booking/**
+
+# Exclude WordPress uploads
+/uploads/
+
+# Exclude logs
+/logs/
+/wflogs/
+/debug
+/debug.log
+*.log
+
+# Exclude temporary and upgrade files
+/upgrade/
+/cache/
+/upgrade-temp-backup/
+
+# Exclude environment secrets
+.env
+.env.*
+!.env.example
+
+# Exclude database exports and backups
+*.sql
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.bak
+*.backup
+
+# Ignore OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

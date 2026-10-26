@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "read more"
+msgstr "leggi di più"
+
+msgid "More reviews"
+msgstr "Altre recensioni"
+
+msgid "Top rated"
+msgstr "Molto apprezzato"
+
+msgid "Latest review %s"
+msgstr "Ultima recensione %s"
+
+msgid "%1 of the last %2 reviews are 5 stars"
+msgstr "5 stelle in %1 delle ultime %2 recensioni"
+
+msgid "%1 reviews on %2"
+msgstr "%1 recensioni su %2"
+
+msgid "%1 reviews"
+msgstr "%1 recensioni"
+
+msgid "%1 left %2 review"
+msgstr "%1 ha lasciato %2"
+
+msgid "%s place picture"
+msgstr "Foto di %s"
+
+msgid "%s place profile"
+msgstr "Profilo di %s"
+
+msgid "review us on"
+msgstr "Lascia una recensione su"
+
+msgid "review us on Google"
+msgstr "Lascia una recensione su Google"
+
+msgid "Rating: %s out of 5"
+msgstr "Valutazione: %s su 5"
+
+msgid "Based on %s reviews"
+msgstr "Basato su %s recensioni"
+
+msgid "powered by Google"
+msgstr "powered by Google"
+
+msgid "See All Reviews"
+msgstr "Vedi tutte le recensioni"
+
+msgid "All reviews"
+msgstr "Tutte le recensioni"
+
+msgid "Google User"
+msgstr "Utente di Google"
+
+msgid "%s profile picture"
+msgstr "Foto profilo di %s"
+
+msgid "%s user profile"
+msgstr "Profilo utente di %s"
+
+msgid "Photo from customer review"
+msgstr "Foto dalla recensione di un cliente"
+
+msgid "Response from the owner"
+msgstr "Risposta del proprietario"
+
+msgid "opens in a new window"
+msgstr "si apre in una nuova finestra"
+
+msgid "Excellent"
+msgstr "Eccellente"
+
+msgid "Great"
+msgstr "Ottimo"
+
+msgid "Good"
+msgstr "Buono"
+
+msgid "Fair"
+msgstr "Discreto"
+
+msgid "Poor"
+msgstr "Scarso"

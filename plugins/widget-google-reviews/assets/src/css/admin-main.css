@@ -1,0 +1,2874 @@
+/*-------------------------------- WP Overrides --------------------------------*/
+.grw-admin #wpcontent {
+    padding: 0;
+}
+
+.google-reviews_page_grw-builder #wpcontent,
+.grw-admin.google-reviews_page_grw-builder #wpcontent,
+.grw-builder-workspace {
+    padding-right: 300px;
+}
+
+.toplevel_page_grw .wp-menu-image img {
+    width: 18px;
+}
+
+.grw-admin.edit-php #wpbody {
+    color: #5d6f80;
+    padding-left: 20px;
+    position: relative;
+}
+
+.grw-admin.edit-php #wpbody .wp-header-end,
+.grw-admin.post-new-php #wpbody .wp-header-end,
+.grw-admin.post-php #wpbody .wp-header-end {
+    margin-top: 6px;
+}
+
+.grw-admin .update-nag {
+    margin: 20px 0 0 20px;
+}
+
+.grw-admin.edit-php .update-nag {
+    margin: 20px 20px 0 0;
+}
+
+.grw-admin.edit-php .update-nag ~ .update-nag {
+    margin-left: 0;
+}
+
+.grw-admin #wpbody #screen-meta-links {
+    display:none
+}
+
+.grw-admin #screen-meta {
+    background-color: #ecf0f1;
+    border: 0;
+    margin: 0;
+}
+
+.grw-admin #screen-meta-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.grw-admin .notice p {
+    font-size: 14px;
+}
+
+.grw-admin .notice.notice-error p {
+    color: #d63638;
+}
+
+.grw-flex {
+    display: flex;
+    align-items: center;
+}
+
+/*-------------------------------- Top Header --------------------------------*/
+.grw-tophead {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-sizing: border-box;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #cfd9db;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: 46px;
+    width: 100%;
+}
+
+@media (min-width: 601px) {
+    .grw-tophead {
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        align-items: center;
+        justify-content: space-between;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        top: 0;
+    }
+}
+
+.grw-tophead img {
+    width: 32px;
+    margin: 0 4px 0 0;
+    vertical-align: middle;
+}
+
+.grw-tophead-title {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.grw-page-title {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    padding: 20px 0 0 20px;
+    line-height: 29px;
+}
+
+.grw-version {
+    text-align: center;
+}
+
+.grw-version-free {
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0;
+    padding: 4px 10px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #999;
+}
+
+.grw-version-upgrade {
+    padding: 4px 4px 2px;
+}
+
+.grw-version-upgrade .grw-upgrade-text {
+    color: #4ea2e7;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 4px;
+    cursor: default;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+.grw-version-upgrade .grw-upgrade-text:hover {
+    color: #157cd1;
+}
+
+.grw-version-upgrade .grw-upgrade-head {
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+
+#grw-upgrade-tips {
+    position: absolute;
+    right: 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 2px 0 0;
+    z-index: 9999999;
+    background: #fff;
+    width: 256px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease,transform .2s ease,-webkit-transform .2s ease;
+}
+
+#grw-upgrade-tips:hover,
+.grw-version-upgrade:hover > #grw-upgrade-tips {
+    opacity: 1;
+    visibility: visible;
+}
+
+#grw-upgrade-tips > a {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ff3a3a;
+    text-align: center;
+    margin: 10px 0 0;
+    padding: 5px 0 0;
+    border-top: 1px solid #ccc;
+    text-transform: uppercase;
+}
+
+#grw-upgrade-tips > a:hover {
+    color: #f70e0e;
+}
+
+/*-------------------------------- BF --------------------------------*/
+.grw-bf {
+    display: flex;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.grw-b {
+    color: #ffffff;
+    padding: 0 2px;
+    background: #000000;
+}
+
+.grw-f {
+    color: #ffffff;
+    padding: 0 2px;
+    background: #ff0000;
+}
+
+.grw-m {
+    color: #ffffff;
+    padding: 0 2px;
+    background: #4e86fd;
+}
+
+.grw-s {
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0 2px;
+    background: #ffb111;
+}
+
+.grw-bf + #grw-upgrade-tips {
+    text-align: center;
+}
+
+/*-------------------------------- Builder page --------------------------------*/
+.grw-toolbar {
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #cfd9db;
+}
+
+@media (min-width: 783px) {
+    .grw-toolbar {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.grw-toolbar-title {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-bottom: 0;
+    margin-right: 20px;
+    min-width: 0;
+}
+
+.grw-toolbar-title-input {
+    background-color: transparent!important;
+    border: none!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    width: 100%;
+}
+
+.grw-toolbar-title-input {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+.grw-toolbar-control {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#grw_sc_msg {
+    color: #f71212;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.grw-toolbar-control button {
+    margin-left: 20px!important;
+}
+
+.grw-toolbar-control input[type="text"] {
+    width: 200px;
+    height: 34px;
+    font-size: 14px;
+}
+
+.grw-toolbar-options label {
+    display: block;
+    padding: 0 0 0 4px;
+}
+
+/* hide post content (json) in title column */
+.grw-admin .type-grw_collection .title.column-title {
+    font-size: 0;
+}
+.grw-admin .type-grw_collection .title.column-title strong,
+.grw-admin .type-grw_collection .title.column-title .row-actions {
+    line-height: 1.5em;
+}
+
+.grw-builder-workspace {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+.google-reviews_page_grw-builder .grw-builder-workspace {
+    padding-right: 0;
+}
+
+.grw-builder-preview {
+    grid-area: preview;
+    min-width: 0;
+    min-height: 0;
+    margin: 16px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: normal;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.grw-builder-preview:has(.wp-gr.wp-dark) {
+    background: #1e1e1e;
+}
+
+.grw-builder-options {
+    box-sizing: border-box;
+    position: fixed;
+    top: 32px;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 1;
+    overflow-y: auto;
+    background: #fafafa;
+}
+
+.grw-builder-options.grw-block-options {
+    position: relative;
+    width: 100%;
+}
+
+.wp-gr .wp-review-hidden {
+    opacity: .5 !important;
+}
+
+.wp-gr .wp-review-hide {
+    opacity: .7 !important;
+    color: #fff !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    text-decoration: none !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    border-color: #0062cc !important;
+    background-color: #427fbf !important;
+}
+
+.wp-gr .grw-review-inner .wp-review-hide {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: 10px !important;
+}
+
+.wp-gr .wp-review-hide:hover {
+    opacity: 1 !important;
+    background-color: #1d62ab !important;
+}
+
+#grw-rate_us-wrap {
+    display: block;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: auto;
+    font-size: 16px;
+    z-index: 99999;
+}
+
+#grw-rate_us {
+    padding: 18px;
+    opacity: 0;
+    -webkit-transform: translate(0px, 0%);
+    -ms-transform: translate(0px, 0%);
+    transform: translate(0px, 0%);
+    -webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+    transition: opacity 300ms ease, -webkit-transform 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease, -webkit-transform 300ms ease;
+}
+
+#grw-rate_us.grw-flash-visible {
+    opacity: 1;
+    -webkit-transform: translate(0px, -100%);
+    -ms-transform: translate(0px, -100%);
+    transform: translate(0px, -100%);
+    text-align: left;
+}
+
+#grw-rate_us.grw-flash-visible.grw-flash-gout {
+    opacity: .5;
+    -webkit-transition: opacity 150ms ease;
+    transition: opacity 150ms ease;
+    transition: opacity 150ms ease;
+    transition: opacity 150ms ease;
+}
+
+.grw-rate_us-close {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    border: 0;
+    background: none;
+    color: #999;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.grw-rate_us-content {
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+.grw-rate_us-head {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.grw-rate_us-body {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-size: 18px;
+}
+
+#grw-rate_us-feedback {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#grw-rate_us-feedback input {
+    width: 100%;
+}
+
+#grw-rate_us-feedback textarea {
+    width: 100%;
+    height: 128px;
+}
+
+#grw-rate_us-feedback button {
+    margin: 0 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/*-------------------------------- Overview page --------------------------------*/
+.grw-overview-workspace {
+    position: relative;
+    font-size: 14px;
+    margin: 20px;
+}
+
+.grw-overview-places {
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
+
+.grw-overview-h {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#grw-overview-rating .rpi-stars {
+    font-size: 20px;
+}
+
+#grw-overview-stats > div {
+    line-height: 32px;
+}
+
+.grw-stat-val {
+    float: right;
+    color: #29af4c;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 0 0 4px;
+}
+
+.grw-stat-val.grw-stat-up {
+    color: #29af4c;
+}
+
+.grw-stat-val.grw-stat-down {
+    color: #e94135;
+}
+
+.grw-stat-val:after {
+    position: absolute;
+    right: 6px;
+    font-size: 16px
+}
+
+.grw-stat-val.grw-stat-up:after {
+    content: '⇧';
+}
+
+.grw-stat-val.grw-stat-down:after {
+    content: '⇩';
+}
+
+.grw-card {
+    margin: 0;
+    padding: 0;
+    color: #36476c;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    position: relative;
+    background: #fff;
+    border-radius: 0px;
+}
+
+.grw-card-bordered {
+    border: 0;
+    border-radius: 10px;
+}
+
+.grw-card-body {
+    padding: 20px;
+}
+
+.grw-card-fh {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.grw-card-header {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #f6f7fa;
+}
+
+.grw-shadow {
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgb(54 71 108 / 15%);
+}
+
+/*-------------------------------- Settings page --------------------------------*/
+.nav-tab.nav-tab-active {
+    box-shadow: none;
+    background: #fff;
+    border-bottom-color: #fff;
+}
+
+.grw-settings-workspace {
+    font-size: 14px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+}
+
+.grw-settings-workspace p {
+    font-size: 14px;
+}
+
+.grw-settings-workspace .grw-alert {
+    max-width: 500px;
+    word-wrap: break-word;
+}
+
+.grw-warn {
+    padding: 10px;
+    margin: 20px 0 10px;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 600;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #ffeb3b;
+}
+
+/*-------------------------------- Support page --------------------------------*/
+.grw-support-question {
+    padding-bottom: 10px;
+}
+
+.grw-support-workspace {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+}
+
+.grw-support-workspace p {
+    font-size: 15px;
+}
+
+.grw-support-workspace #fig p {
+    line-height: 24px;
+}
+
+.grw-support-workspace img {
+    width: 100%;
+}
+
+.grw-support-workspace .subheader {
+    color: #4b76b7;
+    margin: 40px 0 20px;
+    text-decoration: underline;
+}
+
+.grw-support-workspace .grw-flex-col > b:first-child,
+.grw-support-workspace .grw-flex-col3 > b:first-child {
+    padding: 2px 8px;
+    margin-right: 4px;
+    border-radius: 50%;
+    color: #fff;
+    background: #36ad55;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+}
+
+.box-img {
+    padding: 15px;
+    margin: 0 0 10px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+
+/*-------------------------------- Full Installation Guide --------------------------------*/
+#fig hr {
+    border-top: 1px solid #bbb;
+    border-bottom: 2px solid #eee;
+}
+
+#fig .grw-flex-row {
+    align-items: center!important;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#fig .grw-flex-col,
+#fig .grw-flex-col3 {
+    padding: 0 20px;
+    line-height: 24px;
+}
+
+#fig .grw-flex-col:first-child,
+#fig .grw-flex-col3:first-child {
+    padding-right: 10px;
+}
+
+#fig img {
+    width: 100%;
+}
+
+#fig .subheader {
+    color: #4b76b7;
+    margin: 40px 0 20px;
+    text-decoration: underline;
+}
+
+#fig .grw-flex-col > b:first-child,
+#fig .grw-flex-col3 > b:first-child {
+    padding: 2px 8px;
+    margin-right: 4px;
+    border-radius: 50%;
+    color: #fff;
+    background: #36ad55;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+}
+
+/*-------------------------------- Field --------------------------------*/
+.grw-field,
+.grw-field * {
+    box-sizing: border-box;
+}
+
+.grw-field {
+    padding: 0 0 15px 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px dashed #ddd;
+}
+
+@media (min-width: 600px) {
+    .grw-field {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .grw-field-label {
+        flex: 0 0 28%;
+        padding-right: 2%;
+    }
+    .grw-field-option {
+        flex: 0 0 75%;
+    }
+}
+
+.grw-field input[type="text"] {
+    margin: 0;
+    padding: 5px 8px;
+    border-radius: 2px;
+}
+
+.grw-field select {
+    width: 15em;
+    margin-left: 0;
+}
+
+/*-------------------------------- Flex row/col --------------------------------*/
+.grw-flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.grw-flex-col,
+.grw-flex-col2,
+.grw-flex-col3,
+.grw-flex-col4,
+.grw-flex-col6,
+.grw-flex-col7 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.grw-flex-col:first-child,
+.grw-flex-col3:first-child,
+.grw-flex-col6:first-child,
+.grw-flex-col3 + .grw-flex-col3 {
+    padding-right: 10px;
+}
+
+@media (min-width: 800px) {
+    .grw-flex-col {
+        width: 50%;
+    }
+    .grw-flex-col2 {
+        width: 25%;
+    }
+    .grw-flex-col3 {
+        width: 30%;
+    }
+    .grw-flex-col4 {
+        width: 40%;
+    }
+    .grw-flex-col6 {
+        width: 60%;
+    }
+    .grw-flex-col7 {
+        width: 70%;
+    }
+}
+
+/*-------------------------------- Alert --------------------------------*/
+.grw-alert {
+    font-size: 14px;
+    line-height: 1.846;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.grw-alert-dismissable,
+.grw-alert-dismissible {
+    padding-right: 35px;
+}
+
+.grw-alert-success {
+    color: #fff;
+    border-color: #d6e9c6;
+    background-color: #4caf50;
+}
+
+.grw-alert-warning {
+    background-color: #a22525;
+}
+
+.grw-alert a:not(.close),
+.grw-alert .alert-link {
+    color: #fff;
+    font-weight: bold;
+}
+
+/*-------------------------------- Widgets Builder --------------------------------*/
+.grw-builder-platforms {
+    position: relative;
+    box-sizing: border-box;
+}
+
+/*.grw-platform-google .grw-builder-top {
+    color: #fb8e28;
+}
+
+.grw-platform-facebook .grw-builder-top {
+    color: #3c5b9b;
+}
+
+.grw-platform-yelp .grw-builder-top {
+    color: #d32323;
+}*/
+
+.grw-builder-top {
+    padding: 10px;
+    color: #23282d;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4em;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    background: #fafafa url('../../img/button-down-black.svg') no-repeat right;
+}
+
+.grw-builder-top:hover {
+    border-color: #999;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+.grw-builder-inside {
+    border-top: none;
+    padding: 10px 10px 0;
+    line-height: 16px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.grw-builder-inside .grw-builder-option {
+    margin: 10px 0 0;
+    position: relative;
+}
+
+.grw-builder-inside .grw-builder-option:first-child {
+    margin-top: 0;
+}
+
+.grw-builder-inside .grw-builder-option:last-child {
+    margin-bottom: 10px;
+}
+
+/* Options hidden for the current layout must not leave their margins at the section edges. */
+.grw-connect-options > .grw-builder-inside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grw-connect-options > .grw-builder-inside > .grw-builder-option {
+    margin: 0;
+}
+
+.grw-connect-options [hidden] {
+    display: none!important;
+}
+
+.grw-builder-inside input[type="text"],
+.grw-builder-inside select,
+.grw-builder-inside button,
+.grw-builder-inside textarea {
+    width: 100%;
+    clear: both;
+    border-spacing: 0;
+}
+
+.grw-builder-inside pre {
+    margin: 0;
+    color: #b73434;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 4px;
+    background: #fff;
+    overflow: auto;
+}
+
+.grw-builder-connect {
+    margin: 0 0 10px;
+    padding: 6px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background: #eee;
+}
+
+.grw-builder-connect:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 3px 5px rgba(0, 0, 0, .24);
+}
+
+.grw-builder-connect:active {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 0px 1px rgba(0, 0, 0, .24);
+}
+
+.grw-builder-connect.grw-connect-google {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #fa8e08;
+}
+
+.grw-connect-btn {
+    color: #fff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background: #fa8e08;
+    box-shadow: 0 0 2px rgb(0 0 0 / 12%), 0 2px 4px rgb(0 0 0 / 24%);
+    text-decoration: none;
+    user-select: none;
+}
+
+.grw-connect-btn:hover {
+    background: #ef8d14;
+    box-shadow: 0 0 2px rgb(0 0 0 / 12%), 0 3px 5px rgb(0 0 0 / 24%);
+}
+
+.grw-connect-btn:active {
+    background: #fa8e08;
+    box-shadow: 0 0 2px rgb(0 0 0 / 12%), 0 0px 1px rgb(0 0 0 / 24%);
+}
+
+.grw-connect-google-inside {
+    padding: 0 1px;
+}
+
+.grw-builder-connect.grw-connect-facebook {
+    background: #3c5b9b;
+}
+
+.grw-builder-connect.grw-connect-tripadvisor {
+    background: #3eca77;
+}
+
+.grw-builder-connect.grw-connect-yelp {
+    margin-bottom: 0;
+    background: #d32323;
+}
+
+.grw-builder-connect.grw-connect-google + div,
+.grw-builder-connect.grw-connect-yelp + div {
+    margin-top: 10px;
+}
+
+.grw-connections {
+    padding-bottom: 10px;
+}
+
+.grw-connection {
+    cursor: move;
+}
+
+.grw-connect-business {
+    color: #333;
+    text-align: left;
+    margin: 10px 0 0;
+    border: 1px solid #ccc;
+    background: #fafafa url(../../img/button-down-black.svg) no-repeat right;
+}
+
+.grw-connect-business:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 3px 5px rgba(0, 0, 0, .24);
+}
+
+.grw-connect-business:active {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 0px 1px rgba(0, 0, 0, .24);
+}
+
+.grw-connect-business + div {
+    padding: 4px;
+    border: 1px solid rgb(204, 204, 204);
+    border-top: 0;
+}
+
+.grw-connect-select {
+    display: none!important;
+}
+
+.grw-platform-multiple .grw-connect-select {
+    display: inline-block!important;
+}
+
+img.grw-connect-photo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+.grw-connect-photo-change {
+    margin-right: 10px
+}
+
+.grw-connect-error {
+  color: #e60909;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.grw-connection-checkbox {
+    display: none;
+    margin: 10px 0 0 6px;
+}
+
+.grw-platform-multiple .grw-connection-checkbox {
+    display: block;
+}
+
+.grw-quest {
+    position: absolute;
+    top: 6px;
+    right: 3px;
+    width: 16px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background: #eee;
+}
+
+.grw-quest.grw-quest-top {
+    top: 0;
+}
+
+.grw-quest.grw-quest-top22 {
+    top: 22px;
+}
+
+.grw-quest:hover {
+    border: 1px solid #999;
+}
+
+.grw-quest-help {
+    display: none;
+    margin: 0 0 10px 0;
+    padding: 4px;
+    font-size: 13px;
+    line-height: 18px;
+    background: #eee;
+}
+
+.grw-well {
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 3px;
+    border: 1px solid #d9d9d9;
+    background: #f1f1f1;
+}
+
+#rating_temp {
+    height: 260px;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.grw-builder-inside input[type="color"] {
+    width: 25px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.grw-builder-inside input[type="color"] + input[type="text"] {
+    padding: 0;
+    margin: 0 2px 0 0;
+    width: 52px;
+    height: 18px;
+    min-height: 0;
+    font-size: 12px;
+    border-color: #fff;
+    vertical-align: middle;
+}
+
+.grw-builder-inside input[type="range"] {
+    padding: 8px 0;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.grw-range {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grw-range input[type="range"] {
+    flex: 1;
+    min-width: 0;
+}
+
+.grw-range-val {
+    min-width: 40px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.grw-slider-br {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.grw-header-order .rpi-order {
+    margin-top: 8px;
+}
+
+.grw-card-lines {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.grw-builder-inside .rpi-lines-add {
+    width: auto;
+}
+
+.grw-card-hint {
+    color: #646970;
+    font-size: 12px;
+}
+
+.grw-card-error {
+    color: #d63638;
+    font-size: 12px;
+}
+
+.grw-slider-br label {
+    display: flex;
+    position: relative;
+    flex: 1;
+    align-items: center;
+}
+
+.grw-slider-br label > span {
+    margin: 0 2px;
+}
+
+.grw-slider-br .grw-quest {
+    position: relative;
+    top: auto;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+}
+
+.grw-input-x {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    padding: 2px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/*-------------------------------- G connection wizard --------------------------------*/
+@media(max-width:760px) {
+    .grw-admin .ui-dialog[aria-describedby="grw-connect-wizard"] {
+        top: 0!important;
+        left: 0!important;
+        width: 100%!important;
+        height: 100% !important;
+    }
+}
+
+.grw-admin .ui-dialog-titlebar {
+    height: auto;
+    line-height: 28px;
+    padding: 8px 16px;
+}
+
+#grw_place_autocomplete {
+    width: 100%;
+}
+
+#grw_place_autocomplete,
+#grw_place_btn {
+    height: 30px;
+}
+
+#grw_place_list {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background: #ffffff;
+}
+
+#grw_place_list li {
+    margin: 0;
+}
+
+#grw_place_list li a {
+    display: block;
+    padding: 8px;
+    color: #333;
+    font-size: 15px;
+    border: 1px solid #999;
+    border-bottom: none;
+    text-decoration: none
+}
+
+#grw_place_list li:first-child a {
+    border-radius: 5px 5px 0 0;
+}
+
+#grw_place_list li:last-child a {
+    border-bottom: 1px solid #999;
+    border-radius: 0 0 5px 5px;
+}
+
+#grw_place_list li:hover a {
+    background: #ccc;
+}
+
+#grw_place_spin_svg {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 18px;
+    height: 18px;
+    animation: grw-spin 4s infinite linear;
+}
+
+.grw_shortcode {
+    position: relative;
+}
+
+.grw_shortcode small {
+    visibility: hidden;
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+    opacity: 1;
+    color: #12a908;
+}
+
+.grw_shortcode small.grw_hide {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 3s linear;
+}
+
+@keyframes grw-spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+@keyframes fadeIn {
+    0% {
+        opacity: .35;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: .25;
+    }
+}
+/*-------------------------------- Deactivation survey --------------------------------*/
+#grw-deactivate-dialog {
+    font-size: 14px;
+}
+
+.grw-deactivate-reason {
+    display: block;
+    margin: 4px 0;
+}
+
+#grw-deactivate-msg {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.grw-deactivate-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+/*-------------------------------- Places page --------------------------------*/
+.grw-places-workspace {
+    margin: 20px;
+    font-size: 14px;
+}
+
+.grw-places-workspace .description {
+    margin: 0 0 12px;
+}
+
+.grw-places .grw-col-rating,
+.grw-places .grw-col-reviews {
+    width: 14%;
+}
+
+.grw-places .grw-col-updated {
+    width: 12%;
+}
+
+.grw-place {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grw-place img {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.grw-place-text {
+    min-width: 0;
+}
+
+.grw-place-name {
+    display: block;
+    font-size: 14px;
+}
+
+.grw-place-address {
+    display: block;
+    color: #646970;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grw-places .rpi-stars {
+    font-size: 14px;
+}
+
+.grw-places .grw-col-actions {
+    width: 110px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.grw-place-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    border-radius: 4px;
+    text-align: center;
+    color: #50575e;
+    text-decoration: none;
+}
+
+.grw-place-btn:hover,
+.grw-place-btn:focus {
+    color: #2271b1;
+    background: #f0f0f1;
+    box-shadow: none;
+}
+
+.grw-place-btn.grw-place-delete:hover,
+.grw-place-btn.grw-place-delete:focus {
+    color: #b32d2e;
+}
+
+.grw-place-busy {
+    opacity: .6;
+    pointer-events: none;
+}
+
+.grw-place-busy .grw-place-update .dashicons {
+    animation: grw-spin 1s linear infinite;
+}
+
+@media screen and (max-width: 782px) {
+    .grw-places .grw-col-actions {
+        text-align: left;
+    }
+}
+
+/*-------------------------------- Badge page --------------------------------*/
+.grw-badge-page {
+    margin: 0;
+    min-height: calc(100vh - 120px);
+    background: #f0f0f1;
+    font-size: 14px;
+}
+
+.grw-badge-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0 32px;
+    height: 64px;
+    background: #fff;
+    box-shadow: 0 1px 0 #dcdcde;
+    list-style: none;
+}
+
+@media screen and (max-width: 782px) {
+    .grw-badge-steps {
+        padding: 0 20px;
+    }
+}
+
+.grw-badge-steps li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0 6px;
+    color: #50575e;
+    font-size: 15px;
+    cursor: default;
+}
+
+.grw-badge-steps li + li::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    margin: 0 22px 0 8px;
+    border-right: 2px solid #c3c4c7;
+    border-bottom: 2px solid #c3c4c7;
+    transform: rotate(-45deg);
+}
+
+.grw-badge-steps li span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dcdcde;
+    color: #1d2327;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.grw-badge-steps li.grw-badge-step-on {
+    color: #2271b1;
+    cursor: pointer;
+}
+
+.grw-badge-steps li.grw-badge-step-on span {
+    box-shadow: inset 0 0 0 2px #2271b1;
+    background: #fff;
+    color: #2271b1;
+}
+
+.grw-badge-steps li.grw-badge-step-cur {
+    color: #1d2327;
+    font-weight: 600;
+    cursor: default;
+}
+
+.grw-badge-steps li.grw-badge-step-cur span {
+    background: #2271b1;
+    color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+    .grw-badge-steps {
+        padding: 0 10px;
+    }
+    .grw-badge-steps li {
+        gap: 6px;
+        padding: 0 2px;
+    }
+    .grw-badge-steps li + li::before {
+        margin: 0 10px 0 4px;
+    }
+}
+
+.grw-badge-body {
+    padding: 0 32px 22px;
+}
+
+@media screen and (max-width: 782px) {
+    .grw-badge-body {
+        padding: 0 20px 22px;
+    }
+}
+
+/* The header is shared with the other plugin pages, which keep WordPress's 20px. */
+@media screen and (min-width: 783px) {
+    body:has(.grw-badge-page) .grw-tophead {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+}
+
+.grw-badge-section h2 {
+    margin: 22px 0 14px;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.grw-badge-head-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    margin: 22px 0 14px;
+}
+
+.grw-badge-head-inline h2,
+.grw-badge-head-inline .description {
+    margin: 0;
+}
+
+.grw-badge-card-block {
+    margin: 0 0 16px;
+    padding: 16px;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grw-badge-loading {
+    color: #646970;
+}
+
+.grw-badge-note-ico {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: -3px;
+    color: #2271b1;
+}
+
+/* ---- step 1: search ---- */
+.grw-badge-search {
+    position: relative;
+}
+
+/* The inline field block is 68px tall: the page keeps that, and the frame grows over what follows for the suggestion list. */
+.grw-badge-search:has(> .grw-badge-frame) {
+    height: 68px;
+}
+
+.grw-badge-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: block;
+    width: 100%;
+    height: 68px;
+    border: 0;
+}
+
+.grw-badge-input {
+    width: 100%;
+    max-width: 640px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.grw-badge-search .grw-badge-input {
+    max-width: none;
+}
+
+.grw-badge-search .grw-badge-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    max-width: none;
+}
+
+.grw-badge-list {
+    max-width: 640px;
+    margin-top: 4px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.grw-badge-row {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #1d2327;
+}
+
+.grw-badge-row:hover {
+    background: #f6f7f7;
+}
+
+.grw-badge-row small {
+    display: block;
+    color: #646970;
+}
+
+.wp-core-ui .grw-badge-tiles-add {
+    margin: 0 0 10px;
+}
+
+.grw-badge-connect {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0 12px;
+}
+
+.grw-badge-connect .grw-badge-search {
+    flex: 1 1 320px;
+}
+
+.grw-badge-connect .grw-badge-tiles {
+    flex-basis: 100%;
+}
+
+/* ---- step 1: place tiles ---- */
+.grw-badge-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 8px;
+    margin: 0;
+}
+
+.grw-badge-tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+    max-width: 22rem;
+    min-width: 0;
+    padding: 6px 32px 6px 6px;
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+
+.grw-badge-tile-pending {
+    background: #fbf7ef;
+}
+
+.grw-badge-tile-photo {
+    flex: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #ebebeb;
+}
+
+.grw-badge-tile-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 9rem;
+    flex: 1 1 auto;
+}
+
+/* Adds no width of its own: the tile is as wide as its score line and a long name truncates to it. */
+.grw-badge-tile-line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    contain: inline-size;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grw-badge-tile-line b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* The code is what shows; the select over it is invisible and only lends its native list of full names. */
+.grw-badge-tile-lang {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: none;
+    padding: 0 5px;
+    border-radius: 4px;
+    background: #e7e8ea;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.grw-badge-tile-lang:hover {
+    background: #dcdcde;
+}
+
+/* Inside the chip: the tile line clips whatever overflows it. */
+.grw-badge-tile-lang:has(select:focus-visible) {
+    outline: auto;
+    outline-offset: -3px;
+}
+
+.wp-core-ui .grw-badge-tile-lang select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.grw-badge-tile-pending .grw-badge-tile-lang {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.grw-badge-tile-dot {
+    color: #a7aaad;
+}
+
+.grw-badge-tile-score {
+    --rpi-star-size: 16px;
+    --star-align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #646970;
+}
+
+.grw-badge-tile-x {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2350575e' stroke-width='2' stroke-linecap='round'><path d='M6 6l12 12M18 6L6 18'/></svg>") center/12px no-repeat;
+    cursor: pointer;
+}
+
+.grw-badge-tile-x:hover {
+    background-color: #e8e8e8;
+}
+
+/* ---- step 1: picker of the places the plugin already holds, in the metrics of the media modal ---- */
+.grw-badge-modal-open {
+    overflow: hidden;
+}
+
+.grw-badge-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 160000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10vh 16px 16px;
+    background: rgba(0, 0, 0, .7);
+}
+
+.grw-badge-modal-box {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    max-width: 100%;
+    max-height: 80vh;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
+}
+
+.grw-badge-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.grw-badge-modal-head h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.grw-badge-modal-x {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #646970;
+    cursor: pointer;
+}
+
+.grw-badge-modal-x:hover {
+    color: #135e96;
+}
+
+.grw-badge-modal-body {
+    padding: 16px;
+}
+
+.grw-badge-modal-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    border-top: 1px solid #dcdcde;
+}
+
+.grw-badge-pick {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.grw-badge-pick[hidden] {
+    display: none;
+}
+
+.grw-badge-pick input {
+    margin: 0;
+}
+
+.grw-badge-pick span {
+    min-width: 0;
+}
+
+.grw-badge-pick b,
+.grw-badge-pick small {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.grw-badge-modal-empty {
+    padding: 12px 16px;
+    color: #646970;
+}
+
+.grw-badge-modal-foot {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 16px;
+    border-top: 1px solid #dcdcde;
+    background: #f6f7f7;
+}
+
+/* ---- step 1: preset cards ---- */
+.grw-badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 24px;
+}
+
+.grw-badge-card {
+    position: relative;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.grw-badge-card-sel {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.grw-badge-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 16px 0 12px;
+    border-bottom: 1px solid #dcdcde;
+    font-weight: 600;
+}
+
+.grw-badge-card-tools {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.grw-badge-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    color: #50575e;
+    cursor: pointer;
+}
+
+.grw-badge-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.grw-badge-switch i {
+    position: relative;
+    width: 30px;
+    height: 16px;
+    border-radius: 999px;
+    background: #c3c4c7;
+    transition: background .15s;
+}
+
+.grw-badge-switch i::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    transition: left .15s;
+}
+
+.grw-badge-switch input:checked + i {
+    background: #1d2327;
+}
+
+.grw-badge-switch input:checked + i::after {
+    left: 16px;
+}
+
+.grw-badge-switch input:focus-visible + i {
+    outline: auto;
+    outline-offset: 2px;
+}
+
+/* forms.css frames every input[type=color]; the dot is the swatch alone. */
+.wp-core-ui .grw-badge-color,
+.grw-badge-color {
+    width: 18px;
+    height: 18px;
+    min-height: 0;
+    padding: 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.grw-badge-color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.grw-badge-color::-webkit-color-swatch {
+    border: 0;
+    border-radius: 3px;
+}
+
+.grw-badge-color::-moz-color-swatch {
+    border: 0;
+    border-radius: 4px;
+}
+
+.wp-core-ui .grw-badge-color:focus,
+.wp-core-ui .grw-badge-color:focus-visible,
+.grw-badge-color:focus,
+.grw-badge-color:focus-visible {
+    outline: none;
+    box-shadow: none;
+    border-color: #cccccc;
+}
+
+/* Laid over the empty bottom of the stage, so a locked card keeps the height of its neighbours. */
+.grw-badge-card-lock {
+    position: absolute;
+    left: 16px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #646970;
+}
+
+.grw-badge-card-lock[hidden] {
+    display: none;
+}
+
+.grw-badge-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130px;
+    padding: 24px;
+    background: #f6f7f7 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><circle cx='1' cy='1' r='1' fill='%23dcdcde'/></svg>");
+}
+
+.grw-badge-stage-bar {
+    padding: 24px 0;
+}
+
+.grw-badge-stage-bar .grw-badge-root {
+    width: 100%;
+}
+
+/* Glass needs something to frost. */
+.grw-badge-stage-glass {
+    background:
+        linear-gradient(96deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .16) 44%, rgba(255, 255, 255, 0) 52%, rgba(255, 255, 255, .1) 63%, rgba(255, 255, 255, 0) 72%),
+        radial-gradient(60% 46% at 20% 70%, rgba(255, 255, 255, .58) 0%, rgba(255, 255, 255, .22) 40%, rgba(255, 255, 255, 0) 72%),
+        radial-gradient(46% 34% at 80% 46%, rgba(255, 255, 255, .42) 0%, rgba(255, 255, 255, 0) 70%),
+        radial-gradient(90% 26% at 50% 96%, rgba(255, 255, 255, .55) 0%, rgba(255, 255, 255, 0) 75%),
+        radial-gradient(34% 12% at 62% 20%, rgba(255, 255, 255, .26) 0%, rgba(255, 255, 255, 0) 70%),
+        radial-gradient(26% 9% at 28% 30%, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0) 70%),
+        linear-gradient(180deg, #2a8bcc 0%, #4aa1d8 38%, #86c2e5 72%, #b8dcef 100%);
+}
+
+/* The site script floats the badge; on a card it sits in the flow. */
+.grw-badge-static .rpi-badge-cnt {
+    --badge-pos: static;
+}
+
+.grw-badge-static .rpi-badge-cnt.rpi-badge-cnt-bar {
+    width: 100%;
+}
+
+.grw-badge-static .rpi-badge-live .rpi-badge {
+    max-width: 100%;
+}
+
+/*-------------------------------- Badge editor: preview + settings column --------------------------------*/
+.grw-badge-cols {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    /* An explicit flexible second row keeps the two-row settings column from stretching the heading row. */
+    grid-template-rows: max-content 1fr;
+    gap: 0 16px;
+    align-items: start;
+}
+
+.grw-badge-main-col {
+    grid-column: 1;
+    min-width: 0;
+}
+
+.grw-badge-stage-head {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 22px 0 14px;
+}
+
+.grw-badge-stage-head h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.grw-badge-sample {
+    margin: 0 0 10px;
+}
+
+.grw-badge-devices {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.grw-badge-devices button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: #4a4a4a;
+    cursor: pointer;
+}
+
+.grw-badge-devices button:hover {
+    background: #f1f1f1;
+}
+
+.grw-badge-devices button.grw-on {
+    border-color: #e3e3e3;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05), inset 0 -1px 0 #b5b5b5;
+    color: #303030;
+}
+
+/* The preview stage is the page: floating badges are absolute to it. */
+.grw-badge-embed-stage {
+    position: relative;
+    margin: 0;
+    padding: 32px;
+    min-height: 320px;
+    overflow: hidden;
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+}
+
+.grw-badge-embed-stage.grw-badge-stage-edge {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.grw-badge-embed-stage[data-device="tablet"] {
+    box-sizing: border-box;
+    width: 768px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grw-badge-embed-stage[data-device="mobile"] {
+    box-sizing: border-box;
+    width: 390px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* common.css forces .wp-gr to display:block, so the inline-flex badge is centred as inline content. */
+.grw-badge-embed-stage .wp-gr.rpi.grw-badge-root {
+    width: 100%;
+    text-align: center !important;
+}
+
+.grw-badge-stage-float .grw-badge-root .rpi-badge-cnt {
+    --badge-pos: absolute;
+    z-index: 5;
+}
+
+/* The widget root is positioned by the site stylesheet; here the stage must be the anchor. */
+.grw-badge-stage-float .wp-gr.rpi.grw-badge-root {
+    position: static !important;
+}
+
+.grw-pl-side {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 22px;
+    font: 450 13px/20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    color: #303030;
+}
+
+.grw-pl-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .07), 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.grw-pl-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    background: none;
+    font: 600 14px/20px inherit;
+    font-family: inherit;
+    color: #303030;
+    cursor: pointer;
+    text-align: left;
+}
+
+.grw-pl-head i {
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-right: 2px solid #4a4a4a;
+    border-bottom: 2px solid #4a4a4a;
+    transform: rotate(-135deg);
+    transition: transform .15s;
+}
+
+.grw-pl-closed .grw-pl-head i {
+    transform: rotate(45deg);
+}
+
+.grw-pl-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 0 16px 16px;
+}
+
+.grw-pl-closed .grw-pl-body {
+    display: none;
+}
+
+.grw-pl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.grw-pl-label {
+    white-space: nowrap;
+}
+
+.grw-pl-hint {
+    margin-top: -8px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #616161;
+}
+
+/* .wp-core-ui select would win over one class and put back its own padding and font size. */
+.wp-core-ui .grw-pl-select {
+    width: 100%;
+    max-width: 100%;
+    height: 32px;
+    padding: 0 28px 0 12px;
+    border: 1px solid #8a8a8a;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    font: inherit;
+    color: #303030;
+    line-height: 30px;
+}
+
+.grw-pl-row .grw-pl-select {
+    width: auto;
+    min-width: 120px;
+}
+
+.grw-pl-select:focus {
+    border-color: #303030;
+    box-shadow: none;
+    outline: none;
+}
+
+.grw-pl-seg {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.grw-pl-seg button {
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    background: #fff;
+    font: inherit;
+    color: #303030;
+    cursor: pointer;
+}
+
+.grw-pl-seg button.grw-pl-on {
+    background: #303030;
+    border-color: #303030;
+    color: #fff;
+}
+
+.grw-pl-seg-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.grw-pl-seg-grid button {
+    height: 32px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grw-pl-pos {
+    display: grid;
+    gap: 6px;
+}
+
+.grw-pl-sub {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #616161;
+}
+
+.grw-pl-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.grw-pl-toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.grw-pl-toggle i {
+    position: relative;
+    flex: none;
+    width: 40px;
+    height: 20px;
+    border-radius: 999px;
+    background: #d4d4d4;
+    transition: background .15s;
+}
+
+.grw-pl-toggle i::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    transition: left .15s;
+}
+
+.grw-pl-toggle input:checked + i {
+    background: #303030;
+}
+
+.grw-pl-toggle input:checked + i::after {
+    left: 22px;
+}
+
+.grw-pl-toggle input:focus-visible + i {
+    outline: auto;
+    outline-offset: 2px;
+}
+
+.grw-pl-toggle input:disabled + i {
+    opacity: .4;
+}
+
+.grw-pl-toggle input:disabled ~ span {
+    color: #8a8a8a;
+}
+
+.grw-pl-opt {
+    display: grid;
+    gap: 8px;
+}
+
+.grw-pl-value {
+    color: #616161;
+}
+
+.grw-pl-slider {
+    width: 100%;
+    height: 16px;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.grw-pl-slider::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(#303030, #303030) 0 / var(--fill, 0%) 100% no-repeat #e3e3e3;
+}
+
+.grw-pl-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    margin-top: -6px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #8a8a8a;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.grw-pl-slider::-moz-range-track {
+    height: 4px;
+    border-radius: 2px;
+    background: #e3e3e3;
+}
+
+.grw-pl-slider::-moz-range-progress {
+    height: 4px;
+    border-radius: 2px;
+    background: #303030;
+}
+
+.grw-pl-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #8a8a8a;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.grw-pl-slider:focus {
+    outline: none;
+}
+
+.grw-pl-next {
+    width: 100%;
+    text-align: center;
+}
+
+.grw-pl-links {
+    margin: -6px 0 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ---- step 3 ---- */
+.grw-badge-install {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px 28px;
+}
+
+.grw-badge-install-or {
+    margin: 0;
+    color: #646970;
+}
+
+.grw-badge-uninstall {
+    color: #b32d2e;
+}
+
+.grw-badge-sc {
+    width: 140px;
+}
+
+/* Badges list: every row is a badge, so the Theme column only repeats the word. */
+.grw-badges-list .column-grw_theme {
+    display: none;
+}
+
+/*-------------------------------- Themes: slider and grid previews next to the badges --------------------------------*/
+.grw-themes-section + .grw-themes-section {
+    margin-top: 28px;
+}
+
+.grw-themes-section h3 {
+    margin: 0 0 12px;
+    font-size: 15px;
+}
+
+/* The filter and the shared controls stay under the admin bar while the gallery scrolls. */
+.grw-themes-page .grw-badge-head-inline {
+    position: sticky;
+    top: 32px;
+    z-index: 6;
+    align-items: center;
+    margin: 22px -32px 14px;
+    padding: 10px 32px;
+    background: #f0f0f1;
+    box-shadow: 0 1px 0 #dcdcde;
+}
+
+.grw-themes-page-bg {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 12px;
+}
+
+.grw-themes-tools {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 18px;
+}
+
+.grw-themes-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.grw-badge-stage.grw-themes-stage.grw-themes-dark {
+    background: #2c3338;
+}
+
+/* Off screen the browser neither lays out nor paints a preview; the intrinsic size keeps the scrollbar steady. */
+.grw-themes-grid .grw-badge-card,
+.grw-themes-section[data-kind="badge"] .grw-badge-card {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 420px;
+}
+
+.grw-themes-section[data-kind="badge"] .grw-badge-card {
+    contain-intrinsic-size: auto 240px;
+}
+
+.grw-themes-section[data-kind="badge"] .grw-badge-stage:not(.grw-badge-stage-glass) {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 782px) {
+    .grw-themes-page .grw-badge-head-inline {
+        top: 46px;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 8px 20px;
+    }
+}
+
+/* WordPress stops fixing its admin bar here, so only the filter row sticks, at the very top. */
+@media screen and (max-width: 600px) {
+    .grw-themes-page .grw-badge-head-inline {
+        display: contents;
+    }
+    .grw-themes-page .grw-badge-head-inline h2 {
+        margin: 22px 0 10px;
+    }
+    .grw-themes-page .grw-themes-filter {
+        position: sticky;
+        top: 0;
+        z-index: 6;
+        display: flex;
+        margin: 0 -20px;
+        padding: 8px 20px;
+        background: #f0f0f1;
+        box-shadow: 0 1px 0 #dcdcde;
+    }
+    .grw-themes-page .grw-themes-tools {
+        margin-top: 12px;
+    }
+    .grw-themes-page .grw-badge-head-inline .description {
+        margin: 10px 0 14px;
+    }
+}
+
+.grw-themes-filter button {
+    height: 32px;
+}
+
+.grw-themes-filter {
+    justify-content: flex-start;
+}
+
+.grw-themes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grw-themes-grid > .grw-badge-card {
+    grid-column: 1 / -1;
+}
+
+.grw-themes-grid > .grw-themes-half {
+    grid-column: auto;
+}
+
+.grw-themes-pair {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 24px;
+}
+
+.grw-themes-pair[hidden] {
+    display: none;
+}
+
+.grw-themes-pair > .grw-themes-section {
+    flex: 1 1 360px;
+    min-width: 0;
+    margin: 0;
+}
+
+.grw-themes-section + .grw-themes-pair,
+.grw-themes-pair + .grw-themes-section {
+    margin-top: 28px;
+}
+
+/* A slider or grid fills the stage, unlike a badge centred in it. */
+/* The widget is previewed on a page as most sites have it: white. */
+.grw-themes-stage.grw-badge-stage {
+    display: block;
+    padding: 24px 20px 20px;
+    background: #fff;
+}
+
+/* The card wears its stage's colour, so the caption sits on the preview's own background. */
+.grw-badge-card:has(> .grw-themes-dark) {
+    background: #2c3338;
+}
+
+.grw-badge-card:has(> .grw-themes-dark) > .grw-badge-card-head {
+    color: #f0f0f1;
+    border-bottom-color: #50575e;
+}
+
+.grw-themes-stage .wp-gr {
+    width: 100%;
+}
+
+.grw-pl-side [hidden] {
+    display: none !important;
+}
+
+/* The way forward stays in sight while the settings scroll. */
+.grw-themes-page .grw-pl-foot {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    margin: 0 -1px;
+    padding: 12px 1px;
+    background: #f0f0f1;
+    box-shadow: 0 -1px 0 #dcdcde;
+}
+
+/* Focused controls scroll clear of the sticky bar and footer; a scroll padding on the page would also scroll to the bars' own controls. */
+.grw-themes-page .grw-badge-presets * {
+    scroll-margin-top: 156px;
+}
+
+.grw-themes-page :is(.grw-pl-card, .grw-badge-main-col) * {
+    scroll-margin-bottom: 112px;
+}
+
+@media screen and (max-width: 782px) {
+    .grw-themes-page .grw-badge-presets * {
+        scroll-margin-top: 164px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grw-themes-page .grw-badge-presets * {
+        scroll-margin-top: 56px;
+    }
+}
+
+.grw-pl-foot .grw-pl-links {
+    margin: 10px 0 0;
+}
+
+/* Light colours vanish on white without an edge. */
+.grw-themes-page .grw-badge-color {
+    box-shadow: inset 0 0 0 1px #8c8f94;
+    border-radius: 4px;
+}
+
+.grw-themes-pick {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grw-themes-hex {
+    padding: 0;
+    background: none;
+    color: #50575e;
+    font-size: 12px;
+}
+
+.grw-themes-done h2 {
+    margin: 22px 0 4px;
+}
+
+.grw-themes-done .description {
+    margin: 0 0 16px;
+}
+
+.grw-themes-result-stage {
+    max-height: 420px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+}
+
+.grw-themes-result .grw-pl-side {
+    margin-top: 0;
+}
+
+.grw-themes-put {
+    padding: 16px;
+}
+
+.grw-themes-put h3 {
+    margin: 0 0 12px;
+    font-size: 15px;
+}
+
+.grw-themes-put .description {
+    margin: 0 0 8px;
+}
+
+.grw-themes-show {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    margin-bottom: 8px;
+}
+
+.grw-themes-add {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #dcdcde;
+}
+
+.grw-themes-put .grw-themes-made {
+    margin: 8px 0 0;
+}
+
+.grw-themes-made a {
+    white-space: nowrap;
+}
+
+.grw-themes-or {
+    margin: 0 0 8px;
+    font-weight: 600;
+}
+
+.grw-themes-way summary {
+    padding: 4px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grw-themes-way p {
+    margin: 0 0 8px;
+}
+
+.grw-themes-sc-row {
+    display: flex;
+    gap: 8px;
+    max-width: 420px;
+    margin-bottom: 8px;
+}
+
+input.grw-themes-sc[readonly] {
+    flex: 1;
+    min-width: 0;
+    background: #fff;
+    font-family: Consolas, Monaco, monospace;
+}
+
+.grw-themes-tip {
+    display: flex;
+    gap: 6px;
+    margin: 16px 0 0;
+    color: #50575e;
+}
+
+
+@media screen and (min-width: 1101px) {
+    .grw-badge-stage-head {
+        position: sticky;
+        top: 48px;
+    }
+    /* Sticks under the stuck heading row: its 30px line plus the 14px below it. */
+    .grw-badge-main-col {
+        position: sticky;
+        top: 92px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .grw-badge-cols {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .grw-pl-side {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 16px;
+    }
+    .grw-themes-result .grw-pl-side {
+        margin: 0 0 16px;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .grw-badge-grid,
+    .grw-themes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grw-badge-stage-head {
+        flex-wrap: wrap;
+    }
+    /* On a phone the stage is already a phone's width. */
+    .grw-badge-devices {
+        display: none;
+    }
+    .grw-themes-page-bg {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+    .wp-gr.grw-badge-root .rpi-badge-live .rpi-badge-cnt {
+        max-width: 100%;
+    }
+    .wp-gr.grw-badge-root .rpi-badge-live .rpi-badge:not(.rpi-badge-bar) {
+        width: var(--badge-width, 24.6em);
+        max-width: 100%;
+    }
+}

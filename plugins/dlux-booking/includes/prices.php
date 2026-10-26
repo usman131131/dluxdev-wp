@@ -271,6 +271,74 @@ add_action(
 			);
 			if ( $with_extras ) {
 				$sub[] = $extras( $p . '_extras', 'extras', 'Extras for this package', 'Shown only when this package is chosen. Same price for every size.', '50' );
+
+				// Detailing packages section (theme): card image + "What's included" panel.
+				$sub[] = array(
+					'key'          => $k( $p . '_show_msg' ),
+					'name'         => '',
+					'label'        => 'Detailing page',
+					'type'         => 'message',
+					'message'      => 'Used by the Detailing packages section: the card image, and the "What\'s included" panel shown when a package is clicked. All optional.',
+				);
+				$sub[] = array(
+					'key'           => $k( $p . '_image' ),
+					'name'          => 'image',
+					'label'         => 'Card image',
+					'type'          => 'image',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'wrapper'       => array( 'width' => '25' ),
+				);
+				$sub[] = array(
+					'key'           => $k( $p . '_before' ),
+					'name'          => 'before_image',
+					'label'         => 'Before image',
+					'type'          => 'image',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'instructions'  => 'Left half of the "What\'s included" picture.',
+					'wrapper'       => array( 'width' => '25' ),
+				);
+				$sub[] = array(
+					'key'           => $k( $p . '_after' ),
+					'name'          => 'after_image',
+					'label'         => 'After image',
+					'type'          => 'image',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'instructions'  => 'Right half. With only one image it fills the whole picture.',
+					'wrapper'       => array( 'width' => '25' ),
+				);
+				$sub[] = array(
+					'key'          => $k( $p . '_price_label' ),
+					'name'         => 'price_label',
+					'label'        => 'Price label',
+					'type'         => 'text',
+					'placeholder'  => 'From',
+					'instructions' => 'Shown above the price, e.g. "From" or "Price".',
+					'wrapper'      => array( 'width' => '25' ),
+				);
+				$sub[] = array(
+					'key'          => $k( $p . '_long_desc' ),
+					'name'         => 'long_description',
+					'label'        => '"What\'s included" text',
+					'type'         => 'textarea',
+					'rows'         => 3,
+					'new_lines'    => '',
+					'instructions' => 'Paragraph above the features list. Falls back to the subtitle.',
+					'wrapper'      => array( 'width' => '60' ),
+				);
+				$sub[] = array(
+					'key'          => $k( $p . '_ideal' ),
+					'name'         => 'ideal_for',
+					'label'        => 'Ideal for',
+					'type'         => 'text',
+					'placeholder'  => 'Cars being sold or bought',
+					'wrapper'      => array( 'width' => '40' ),
+				);
 			}
 			return array(
 				'key'          => $k( $p ),
@@ -545,6 +613,12 @@ function dlux_bk_read_packages( $rows, $group, array $sizes, $shared_extras, arr
 			'featured' => ! empty( $p['is_featured'] ),
 			'badge'    => ! empty( $p['is_featured'] ) ? trim( (string) ( $p['badge'] ?? '' ) ) : '',
 			'prices'   => $prices,
+			'image'        => (int) ( is_array( $p['image'] ?? null ) ? ( $p['image']['ID'] ?? 0 ) : ( $p['image'] ?? 0 ) ),
+			'before_image' => (int) ( is_array( $p['before_image'] ?? null ) ? ( $p['before_image']['ID'] ?? 0 ) : ( $p['before_image'] ?? 0 ) ),
+			'after_image'  => (int) ( is_array( $p['after_image'] ?? null ) ? ( $p['after_image']['ID'] ?? 0 ) : ( $p['after_image'] ?? 0 ) ),
+			'price_label'  => trim( (string) ( $p['price_label'] ?? '' ) ),
+			'long_desc'    => trim( (string) ( $p['long_description'] ?? '' ) ),
+			'ideal_for'    => trim( (string) ( $p['ideal_for'] ?? '' ) ),
 			'extras'   => null !== $shared_extras ? $shared_extras : dlux_bk_read_extras( $p['extras'] ?? null, 'dx-' . substr( $id, 2 ) . '-', $used ),
 		);
 	}
