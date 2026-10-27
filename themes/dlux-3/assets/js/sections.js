@@ -67,6 +67,34 @@
 		render();
 	});
 
+	/* ---------- Our Services (Beyond Detailing) ---------- */
+	document.querySelectorAll('[data-bds]').forEach(function (root) {
+		var cards = Array.prototype.slice.call(root.querySelectorAll('[data-bds-card]'));
+		function open(card, scroll) {
+			cards.forEach(function (c) {
+				var on = c === card;
+				c.setAttribute('aria-expanded', on ? 'true' : 'false');
+				var panel = document.getElementById(c.getAttribute('aria-controls'));
+				if (panel) panel.hidden = !on;
+			});
+			var p = document.getElementById(card.getAttribute('aria-controls'));
+			if (scroll && p) {
+				var r = p.getBoundingClientRect();
+				if (r.top > window.innerHeight - 120 || r.top < 0) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}
+		cards.forEach(function (card) {
+			card.addEventListener('click', function () { open(card, true); });
+		});
+		// Open a service from the URL, e.g. /beyond-detailing/#services-wraps
+		var hash = window.location.hash.slice(1);
+		if (hash) {
+			cards.forEach(function (card) {
+				if (card.getAttribute('aria-controls') === hash) { open(card, false); document.getElementById(hash).scrollIntoView(); }
+			});
+		}
+	});
+
 	/* ---------- Info tabs ---------- */
 	document.querySelectorAll('[data-info-tabs]').forEach(function (root) {
 		var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));

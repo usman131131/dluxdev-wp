@@ -16,6 +16,9 @@ require DLUX_DIR . '/inc/contact.php';
 require DLUX_DIR . '/inc/voucher-popup.php';
 require DLUX_DIR . '/inc/showcase.php';
 require DLUX_DIR . '/inc/svg.php';
+require DLUX_DIR . '/inc/quote-requests.php';
+require DLUX_DIR . '/inc/quote.php';
+require DLUX_DIR . '/inc/bd-services.php';
 
 /* ---------- Classic editor (posts, pages and widgets) ---------- */
 add_filter('use_block_editor_for_post', '__return_false', 100);
@@ -134,7 +137,7 @@ add_action('wp_enqueue_scripts', function () {
 
 /* ---------- Detailing packages toggle + Info tabs – only on pages with those sections ---------- */
 add_action('wp_enqueue_scripts', function () {
-	if (!dlux_page_has_layout('detail_packages') && !dlux_page_has_layout('info_tabs')) return;
+	if (!dlux_page_has_layout('detail_packages') && !dlux_page_has_layout('info_tabs') && !dlux_page_has_layout('bd_services')) return;
 
 	$path = get_stylesheet_directory() . '/assets/js/sections.js';
 	wp_enqueue_script(
@@ -144,6 +147,27 @@ add_action('wp_enqueue_scripts', function () {
 		file_exists($path) ? filemtime($path) : DLUX_VERSION,
 		true
 	);
+}, 20);
+
+/* ---------- Quote form (Beyond Detailing) – only on pages with the section ---------- */
+add_action('wp_enqueue_scripts', function () {
+	if (!dlux_page_has_layout('quote_form')) return;
+
+	$path = get_stylesheet_directory() . '/assets/js/quote.js';
+	wp_enqueue_script(
+		'dlux-quote',
+		DLUX_URI . '/assets/js/quote.js',
+		[],
+		file_exists($path) ? filemtime($path) : DLUX_VERSION,
+		true
+	);
+	wp_localize_script('dlux-quote', 'dluxQuote', [
+		'ajaxUrl' => admin_url('admin-ajax.php'),
+		'sending' => __('Sending…', 'dlux'),
+		'success' => __('Thanks! We’ll be in touch with your quote soon.', 'dlux'),
+		'invalid' => __('Please add a mobile number or email so we can reply.', 'dlux'),
+		'error'   => __('Sorry, something went wrong. Please call or email us instead.', 'dlux'),
+	]);
 }, 20);
 
 /* Preload the two most-used local fonts (heading + paragraph) */
