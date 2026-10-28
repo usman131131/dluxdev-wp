@@ -54,3 +54,65 @@ function dlux_showcase_sizes( array $packages ) {
 	}
 	return $sizes;
 }
+
+/**
+ * Extras for the Add-ons grid, from Booking Prices.
+ * Detailing: each package has its own extras, so rows with the same name + price are merged
+ * into one card that knows its extra id per package. Wash: shared extras ('*').
+ *
+ * @return array[] { name, price, desc, ids: [ package_id|'*' => extra_id ] }
+ */
+function dlux_showcase_extras( $service = 'detail' ) {
+	$group = dlux_booking_group( $service );
+	if ( ! $group ) return [];
+	$out = [];
+	if ( ! empty( $group['extras'] ) ) {
+		foreach ( (array) $group['extras'] as $x ) {
+			if ( empty( $x['id'] ) || empty( $x['name'] ) ) continue;
+			$out[] = [ 'name' => $x['name'], 'price' => $x['price'] ?? '', 'desc' => (string) ( $x['desc'] ?? '' ), 'ids' => [ '*' => $x['id'] ] ];
+		}
+		return $out;
+	}
+	foreach ( (array) ( $group['packages'] ?? [] ) as $p ) {
+		foreach ( (array) ( $p['extras'] ?? [] ) as $x ) {
+			if ( empty( $x['id'] ) || empty( $x['name'] ) ) continue;
+			$key = strtolower( trim( $x['name'] ) ) . '|' . (float) ( $x['price'] ?? 0 );
+			if ( ! isset( $out[ $key ] ) ) $out[ $key ] = [ 'name' => $x['name'], 'price' => $x['price'] ?? '', 'desc' => '', 'ids' => [] ];
+			if ( '' === $out[ $key ]['desc'] && ! empty( $x['desc'] ) ) $out[ $key ]['desc'] = (string) $x['desc'];
+			$out[ $key ]['ids'][ $p['id'] ] = $x['id'];
+		}
+	}
+	return array_values( $out );
+}
+
+/** Selection bar for Detailing packages + Add-ons grid (printed once, in the footer). */
+function dlux_pick_bar() {
+	$url = dlux_booking_url();
+	if ( ! $url ) return '';
+	ob_start();
+	?>
+	<div class="pick-bar" data-pick-bar data-book-url="<?php echo esc_url( $url ); ?>" hidden>
+		<div class="container pick-bar__inner">
+			<div class="pick-bar__summary">
+				<span class="pick-bar__label"><?php esc_html_e( 'Your selection', 'dlux' ); ?></span>
+				<strong class="pick-bar__title" data-pb-title></strong>
+				<span class="pick-bar__extras" data-pb-extras></span>
+			</div>
+			<div class="pick-bar__total">
+				<span><?php esc_html_e( 'Total', 'dlux' ); ?></span>
+				<strong data-pb-total></strong>
+			</div>
+			<a class="btn btn--primary pick-bar__btn" href="<?php echo esc_url( $url ); ?>" data-pb-link><span><?php esc_html_e( 'Book now', 'dlux' ); ?></span><span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
+			<button type="button" class="pick-bar__clear" data-pb-clear aria-label="<?php esc_attr_e( 'Clear selection', 'dlux' ); ?>">&times;</button>
+		</div>
+	</div>
+	<?php
+	return (string) ob_get_clean();
+}
+
+add_action( 'wp_footer', function () {
+	if ( ! function_exists( 'dlux_page_has_layout' ) || ! dlux_booking_active() ) return;
+	if ( dlux_page_has_layout( 'detail_packages' ) || dlux_page_has_layout( 'addons_grid' ) ) {
+		echo dlux_pick_bar(); // phpcs:ignore
+	}
+} );

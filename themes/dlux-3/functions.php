@@ -138,7 +138,7 @@ add_action('wp_enqueue_scripts', function () {
 
 /* ---------- Detailing packages toggle + Info tabs – only on pages with those sections ---------- */
 add_action('wp_enqueue_scripts', function () {
-	if (!dlux_page_has_layout('detail_packages') && !dlux_page_has_layout('info_tabs') && !dlux_page_has_layout('bd_services')) return;
+	if (!dlux_page_has_layout('detail_packages') && !dlux_page_has_layout('info_tabs') && !dlux_page_has_layout('bd_services') && !dlux_page_has_layout('addons_grid')) return;
 
 	$path = get_stylesheet_directory() . '/assets/js/sections.js';
 	wp_enqueue_script(

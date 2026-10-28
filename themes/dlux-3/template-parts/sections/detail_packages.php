@@ -42,7 +42,7 @@ $uid = 'dp-' . wp_unique_id();
 					$price = $p['prices'][ $first_size ] ?? null;
 					$label = '' !== $p['price_label'] ? $p['price_label'] : __( 'From', 'dlux' );
 					?>
-					<button type="button" class="dpk-card<?php echo $p['featured'] ? ' is-featured' : ''; ?>" aria-expanded="<?php echo $i === $open ? 'true' : 'false'; ?>" aria-controls="<?php echo esc_attr( $uid . '-' . $i ); ?>" data-dpk-card="<?php echo esc_attr( $i ); ?>" data-prices="<?php echo esc_attr( wp_json_encode( $p['prices'] ) ); ?>">
+					<button type="button" class="dpk-card<?php echo $p['featured'] ? ' is-featured' : ''; ?>" aria-expanded="<?php echo $i === $open ? 'true' : 'false'; ?>" aria-controls="<?php echo esc_attr( $uid . '-' . $i ); ?>" data-dpk-card="<?php echo esc_attr( $i ); ?>" data-package-id="<?php echo esc_attr( $p['id'] ); ?>" data-package-name="<?php echo esc_attr( $p['name'] ); ?>" data-prices="<?php echo esc_attr( wp_json_encode( $p['prices'] ) ); ?>">
 						<span class="dpk-card__media">
 							<?php echo $p['image'] ? wp_get_attachment_image( $p['image'], 'dlux-card', false, [ 'alt' => '', 'loading' => 'lazy' ] ) : ''; // phpcs:ignore ?>
 						</span>

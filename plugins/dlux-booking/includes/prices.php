@@ -136,10 +136,11 @@ add_action(
 				'instructions' => $instructions,
 				'sub_fields'   => array(
 					array(
-						'key'   => $k( $key . '_name' ),
-						'name'  => 'name',
-						'label' => 'Name',
-						'type'  => 'text',
+						'key'     => $k( $key . '_name' ),
+						'name'    => 'name',
+						'label'   => 'Name',
+						'type'    => 'text',
+						'wrapper' => array( 'width' => '30' ),
 					),
 					array(
 						'key'     => $k( $key . '_price' ),
@@ -149,7 +150,17 @@ add_action(
 						'prepend' => '$',
 						'min'     => 0,
 						'step'    => 0.01,
-						'wrapper' => array( 'width' => '30' ),
+						'wrapper' => array( 'width' => '15' ),
+					),
+					array(
+						'key'          => $k( $key . '_desc' ),
+						'name'         => 'description',
+						'label'        => 'Description',
+						'type'         => 'textarea',
+						'rows'         => 2,
+						'new_lines'    => '',
+						'instructions' => 'Optional. Shown on the add-on cards on the website.',
+						'wrapper'      => array( 'width' => '55' ),
 					),
 				),
 			);
@@ -248,7 +259,7 @@ add_action(
 					'layout'       => 'table',
 					'button_label' => 'Add size price',
 					'instructions' => 'Sizes come from the Vehicle sizes tab. Sizes without a row are not offered.',
-					'wrapper'      => array( 'width' => $with_extras ? '50' : '100' ),
+					'wrapper'      => array( 'width' => '100' ),
 					'sub_fields'   => array(
 						array(
 							'key'     => $k( $p . '_price_size' ),
@@ -270,7 +281,7 @@ add_action(
 				),
 			);
 			if ( $with_extras ) {
-				$sub[] = $extras( $p . '_extras', 'extras', 'Extras for this package', 'Shown only when this package is chosen. Same price for every size.', '50' );
+				$sub[] = $extras( $p . '_extras', 'extras', 'Extras for this package', 'Shown only when this package is chosen. Same price for every size.' );
 
 				// Detailing packages section (theme): card image + "What's included" panel.
 				$sub[] = array(
@@ -559,6 +570,7 @@ function dlux_bk_read_extras( $rows, $prefix, array &$used ) {
 			'id'    => dlux_bk_unique_id( $prefix . sanitize_title( $name ), $used ),
 			'name'  => $name,
 			'price' => $price,
+			'desc'  => trim( (string) ( $r['description'] ?? '' ) ),
 		);
 	}
 	return $out;
