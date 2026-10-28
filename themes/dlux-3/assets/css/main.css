@@ -5580,3 +5580,45 @@ body.voucher-open {
 	font-size: clamp(24px, 2.4vw, 30px);
 	text-transform: none;
 }
+
+/* ---------- Header WhatsApp button ---------- */
+.site-header__actions { align-items: center; }
+
+.header-whatsapp {
+	display: inline-grid;
+	flex: 0 0 auto;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	border: 1.5px solid rgba(255, 255, 255, .85);
+	border-radius: 50%;
+	background: transparent;
+	color: #fff;
+	text-decoration: none;
+	transition: background-color .2s, border-color .2s, transform .2s;
+}
+
+.header-whatsapp:hover,
+.header-whatsapp:focus-visible {
+	border-color: var(--accent);
+	background: var(--accent);
+	transform: translateY(-1px);
+}
+.header-whatsapp svg { width: 22px; height: 22px; }
+.header-whatsapp__label { display: none; }
+
+@media (max-width: 1024px) {
+	.header-whatsapp {
+		display: inline-flex;
+		gap: 10px;
+		width: 100%;
+		height: auto;
+		min-height: 52px;
+		border-radius: var(--pill);
+		justify-content: center;
+		font: 600 14px/1 var(--font-sub);
+		letter-spacing: .02em;
+		text-transform: uppercase;
+	}
+	.header-whatsapp__label { display: inline; }
+}

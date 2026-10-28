@@ -19,6 +19,7 @@ require DLUX_DIR . '/inc/svg.php';
 require DLUX_DIR . '/inc/quote-requests.php';
 require DLUX_DIR . '/inc/quote.php';
 require DLUX_DIR . '/inc/bd-services.php';
+require DLUX_DIR . '/inc/whatsapp.php';
 
 /* ---------- Classic editor (posts, pages and widgets) ---------- */
 add_filter('use_block_editor_for_post', '__return_false', 100);

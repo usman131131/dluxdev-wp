@@ -34,7 +34,9 @@
 			<div class="site-header__actions">
 				<?php
 				echo dlux_button( dlux_option( 'header_primary_button' ), 'btn--primary btn--sm' ); // phpcs:ignore
-				echo dlux_button( dlux_option( 'header_secondary_button' ), 'btn--outline btn--sm' ); // phpcs:ignore
+				// WhatsApp icon (Theme Settings › Header WhatsApp button) replaces the secondary button when set.
+				$wa = function_exists( 'dlux_whatsapp_button' ) ? dlux_whatsapp_button() : '';
+				echo $wa ? $wa : dlux_button( dlux_option( 'header_secondary_button' ), 'btn--outline btn--sm' ); // phpcs:ignore
 				?>
 			</div>
 		</div>
