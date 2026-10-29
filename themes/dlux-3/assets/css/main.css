@@ -5877,3 +5877,14 @@ body.has-pick-bar { padding-bottom: 96px; }
 	.work__slider .carousel-nav__btn--prev { left: -8px; }
 	.work__slider .carousel-nav__btn--next { right: -8px; }
 }
+
+/* ---------- Coming Soon inside the normal header + footer ---------- */
+.coming-soon-page .soon {
+	min-height: calc(100vh - var(--header-h));
+	min-height: calc(100svh - var(--header-h));
+}
+
+.coming-soon-page .soon__inner {
+	justify-content: center;
+	padding-block: var(--section-y);
+}

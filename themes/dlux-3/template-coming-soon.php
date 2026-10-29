@@ -2,7 +2,7 @@
 /**
  * Template Name: Coming Soon
  *
- * Stand-alone "coming soon" page (no header/footer menus).
+ * "Coming soon" page with the site's normal header and footer.
  * Contact details use Theme Settings when filled in, otherwise the defaults below.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -12,24 +12,19 @@ $email   = dlux_option( 'email', 'info@dluxwash.com.au' );
 $locs    = (array) dlux_option( 'locations', [] );
 $address = ! empty( $locs[0]['address'] ) ? $locs[0]['address'] : '321–325 Williamstown Rd, Yarraville VIC';
 $map     = ! empty( $locs[0]['directions_url'] ) ? $locs[0]['directions_url'] : 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $address );
-$socials = (array) dlux_option( 'social_links', [] );
-?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php wp_head(); ?>
-</head>
-<body <?php body_class( 'coming-soon-page' ); ?>>
-<?php wp_body_open(); ?>
 
-<main class="soon">
+add_filter( 'body_class', function ( $classes ) {
+	$classes[] = 'coming-soon-page';
+	return $classes;
+} );
+
+get_header();
+?>
+
+<section class="soon">
 	<div class="soon__glow" aria-hidden="true"></div>
 
 	<div class="container soon__inner">
-		<?php echo dlux_logo( dlux_option( 'site_logo' ), 'logo soon__logo' ); // phpcs:ignore ?>
-
 		<div class="soon__content">
 			<p class="eyebrow"><?php esc_html_e( 'Hand car wash & detailing · Yarraville', 'dlux' ); ?></p>
 			<h1 class="soon__title"><?php echo wp_kses( __( 'Something <span>shiny</span><br>is coming soon', 'dlux' ), [ 'span' => [], 'br' => [] ] ); ?></h1>
@@ -72,20 +67,8 @@ $socials = (array) dlux_option( 'social_links', [] );
 			</div>
 		</div>
 
-		<div class="soon__footer">
-			<?php if ( $socials ) : ?>
-				<ul class="socials">
-					<?php foreach ( $socials as $s ) :
-						if ( empty( $s['url'] ) ) continue; ?>
-						<li><a href="<?php echo esc_url( $s['url'] ); ?>" target="_blank" rel="noopener" aria-label="<?php echo esc_attr( ucfirst( $s['platform'] ) ); ?>"><?php echo dlux_social_icon( $s['platform'] ); // phpcs:ignore ?></a></li>
-					<?php endforeach; ?>
-				</ul>
-			<?php endif; ?>
-			<p class="copyright"><?php echo esc_html( dlux_tokens( dlux_option( 'copyright_text', '© {year} ' . get_bloginfo( 'name' ) . '. All Rights Reserved.' ) ) ); ?></p>
-		</div>
 	</div>
-</main>
+</section>
 
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php
+get_footer();
