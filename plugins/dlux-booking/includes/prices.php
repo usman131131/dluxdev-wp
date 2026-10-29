@@ -414,8 +414,8 @@ add_action(
 						'name'          => 'detail_title',
 						'label'         => 'Heading on the booking page',
 						'type'          => 'text',
-						'default_value' => 'Beyond Your Wash',
-						'placeholder'   => 'Beyond Your Wash',
+						'default_value' => 'Beyond Wash',
+						'placeholder'   => 'Beyond Wash',
 						'wrapper'       => array( 'width' => '50' ),
 					),
 					$packages( 'dp', 'detail_packages', 'Detailing packages', 'Add detailing package', 'Services beyond the wash, e.g. Paint Correction, Interior Detail, Full Detail, Ceramic Coating.', true ),
@@ -703,7 +703,7 @@ function dlux_bk_menu() {
 		$title    = trim( (string) dlux_bk_price_field( 'detail_title' ) );
 		$groups[] = array(
 			'id'       => 'detail',
-			'label'    => '' !== $title ? $title : 'Beyond Your Wash',
+			'label'    => '' !== $title ? $title : 'Beyond Wash',
 			'extras'   => array(),
 			'packages' => $detail,
 		);
@@ -736,7 +736,7 @@ function dlux_bk_group_label( $group_id ) {
 			return $g['label'];
 		}
 	}
-	return 'detail' === $group_id ? 'Beyond Your Wash' : 'Car wash';
+	return 'detail' === $group_id ? 'Beyond Wash' : 'Car wash';
 }
 
 /* ---------------- Converting older price data ---------------- */
@@ -924,16 +924,17 @@ add_action(
 	30
 );
 
-/* One-time: rename the saved booking-page heading "Detailing" to "Beyond Your Wash" (custom headings are left alone). */
+/* One-time: rename the saved booking-page heading "Detailing" / "Beyond Your Wash" to "Beyond Wash" (custom headings are left alone). */
 add_action(
 	'init',
 	function () {
-		if ( get_option( 'dlux_bk_detail_title_421' ) ) {
+		if ( get_option( 'dlux_bk_detail_title_511' ) ) {
 			return;
 		}
+		update_option( 'dlux_bk_detail_title_511', 1, false );
 		update_option( 'dlux_bk_detail_title_421', 1, false );
-		if ( 'Detailing' === get_option( DLUX_BK_PRICES_ID . '_detail_title' ) ) {
-			update_option( DLUX_BK_PRICES_ID . '_detail_title', 'Beyond Your Wash', false );
+		if ( in_array( get_option( DLUX_BK_PRICES_ID . '_detail_title' ), array( 'Detailing', 'Beyond Your Wash' ), true ) ) {
+			update_option( DLUX_BK_PRICES_ID . '_detail_title', 'Beyond Wash', false );
 		}
 	},
 	31
