@@ -87,7 +87,7 @@ add_action('wp_enqueue_scripts', function () {
 
 /* ---------- Slick carousel (only on pages with the "Beyond the wash" section) ---------- */
 add_action('wp_enqueue_scripts', function () {
-	if (!dlux_page_has_layout('services')) return;
+	if (!dlux_page_has_layout('services') && !dlux_page_has_layout('detail_packages')) return;
 
 	wp_enqueue_style('slick', DLUX_URI . '/assets/vendor/slick/slick.css', [], '1.8.1');
 	wp_enqueue_script('slick', DLUX_URI . '/assets/vendor/slick/slick.min.js', ['jquery'], '1.8.1', true);

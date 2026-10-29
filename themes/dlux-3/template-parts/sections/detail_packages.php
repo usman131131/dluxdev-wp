@@ -37,7 +37,13 @@ $uid = 'dp-' . wp_unique_id();
 		<?php if ( ! $packages ) : ?>
 			<p class="dpk__empty"><?php echo esc_html( $empty ); ?></p>
 		<?php else : ?>
-			<div class="dpk__grid">
+			<div class="dpk__slider">
+			<?php if ( count( $packages ) > 1 ) : ?>
+				<button type="button" class="carousel-nav__btn carousel-nav__btn--prev" data-dpk-prev aria-label="<?php esc_attr_e( 'Previous packages', 'dlux' ); ?>">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</button>
+			<?php endif; ?>
+			<div class="dpk__grid"<?php echo count( $packages ) > 1 ? ' data-dpk-carousel' : ''; ?>>
 				<?php foreach ( $packages as $i => $p ) :
 					$price = $p['prices'][ $first_size ] ?? null;
 					$label = '' !== $p['price_label'] ? $p['price_label'] : __( 'From', 'dlux' );
@@ -59,6 +65,12 @@ $uid = 'dp-' . wp_unique_id();
 						</span>
 					</button>
 				<?php endforeach; ?>
+			</div>
+			<?php if ( count( $packages ) > 1 ) : ?>
+				<button type="button" class="carousel-nav__btn carousel-nav__btn--next" data-dpk-next aria-label="<?php esc_attr_e( 'Next packages', 'dlux' ); ?>">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</button>
+			<?php endif; ?>
 			</div>
 
 			<?php foreach ( $packages as $i => $p ) :

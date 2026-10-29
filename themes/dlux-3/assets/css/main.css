@@ -5812,3 +5812,37 @@ body.has-pick-bar { padding-bottom: 96px; }
 }
 
 .visit-call svg { width: 20px; height: 20px; }
+
+/* ---------- Detailing packages slider (Slick) ---------- */
+.dpk__slider { position: relative; }
+
+.dpk__grid.slick-initialized { display: block; }
+.dpk__grid .slick-list { margin: -6px -6px; padding: 6px 0; }
+.dpk__grid .slick-track { display: flex; }
+.dpk__grid .slick-slide { height: auto; margin: 0 6px; }
+.dpk__grid .dpk-card.slick-slide { display: flex; }
+.dpk__grid .dpk-card:hover { transform: none; }
+
+.dpk__slider .carousel-nav__btn {
+	position: absolute;
+	top: 50%;
+	z-index: 3;
+	transform: translateY(-50%);
+	border-color: var(--accent);
+	background: var(--accent);
+	color: #fff;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+}
+
+.dpk__slider .carousel-nav__btn:hover { border-color: var(--accent-dark); background: var(--accent-dark); }
+.dpk__slider .carousel-nav__btn--prev { left: -22px; }
+.dpk__slider .carousel-nav__btn--next { right: -22px; }
+
+/* Before the slider starts (or without JS): the normal grid, arrows hidden */
+.dpk__slider .dpk__grid:not(.slick-initialized) ~ .carousel-nav__btn,
+.dpk__slider .carousel-nav__btn:has(~ .dpk__grid:not(.slick-initialized)) { display: none; }
+
+@media (max-width: 1300px) {
+	.dpk__slider .carousel-nav__btn--prev { left: -8px; }
+	.dpk__slider .carousel-nav__btn--next { right: -8px; }
+}

@@ -7,13 +7,16 @@
 		return '$' + (n % 1 === 0 ? n.toLocaleString('en-AU') : n.toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
 	}
 
-	/* ---------- Detailing packages ---------- */
+	/* ---------- Detailing packages ----------
+	 * Cards may be duplicated by the carousel (infinite loop), so everything goes by the
+	 * card's index (data-dpk-card) and clicks are delegated from the section. */
 	document.querySelectorAll('[data-dpk]').forEach(function (root) {
-		var cards = Array.prototype.slice.call(root.querySelectorAll('[data-dpk-card]'));
 		var panels = Array.prototype.slice.call(root.querySelectorAll('[data-dpk-panel]'));
 		var sizes = Array.prototype.slice.call(root.querySelectorAll('[data-dpk-size]'));
 		var size = sizes.length ? sizes[0].getAttribute('data-dpk-size') : '';
 
+		function cards() { return Array.prototype.slice.call(root.querySelectorAll('[data-dpk-card]')); }
+		function panelFor(idx) { return root.querySelector('[data-dpk-panel="' + idx + '"]'); }
 		function priceText(card) {
 			var prices = {};
 			try { prices = JSON.parse(card.getAttribute('data-prices') || '{}'); } catch (e) {}
@@ -21,11 +24,15 @@
 		}
 
 		function render() {
-			cards.forEach(function (card, i) {
+			var done = {};
+			cards().forEach(function (card) {
 				var text = priceText(card);
 				var p = card.querySelector('[data-dpk-price]');
 				if (p) p.textContent = text;
-				var panel = panels[i];
+				var idx = card.getAttribute('data-dpk-card');
+				if (done[idx]) return;
+				done[idx] = true;
+				var panel = panelFor(idx);
 				if (!panel) return;
 				var pp = panel.querySelector('[data-dpk-price]');
 				if (pp) pp.textContent = text;
@@ -42,57 +49,38 @@
 			});
 		}
 
-		sizes.forEach(function (btn) {
-			btn.addEventListener('click', function () {
-				size = btn.getAttribute('data-dpk-size');
-				sizes.forEach(function (b) { b.setAttribute('aria-checked', b === btn ? 'true' : 'false'); });
+		function open(idx) {
+			cards().forEach(function (c) { c.setAttribute('aria-expanded', c.getAttribute('data-dpk-card') === idx ? 'true' : 'false'); });
+			panels.forEach(function (p) { p.hidden = p.getAttribute('data-dpk-panel') !== idx; });
+			var panel = panelFor(idx);
+			if (panel) {
+				var r = panel.getBoundingClientRect();
+				if (r.top > window.innerHeight - 120 || r.top < 0) {
+					panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				}
+			}
+		}
+
+		root.addEventListener('click', function (e) {
+			var sizeBtn = e.target.closest('[data-dpk-size]');
+			var card = e.target.closest('[data-dpk-card]');
+			if (sizeBtn) {
+				size = sizeBtn.getAttribute('data-dpk-size');
+				sizes.forEach(function (b) { b.setAttribute('aria-checked', b === sizeBtn ? 'true' : 'false'); });
 				render();
-			});
+			} else if (card) {
+				open(card.getAttribute('data-dpk-card'));
+			}
 		});
 
-		cards.forEach(function (card, i) {
-			card.addEventListener('click', function () {
-				cards.forEach(function (c, j) { c.setAttribute('aria-expanded', j === i ? 'true' : 'false'); });
-				panels.forEach(function (p, j) { p.hidden = j !== i; });
-				var panel = panels[i];
-				if (panel) {
-					var r = panel.getBoundingClientRect();
-					if (r.top > window.innerHeight - 120 || r.top < 0) {
-						panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-					}
-				}
-			});
+		// The carousel adds copies of the cards after load: give them the current prices / state.
+		root.addEventListener('dlux:dpk-cloned', function () {
+			render();
+			var on = root.querySelector('[data-dpk-card][aria-expanded="true"]');
+			if (on) open(on.getAttribute('data-dpk-card'));
 		});
 
 		render();
-	});
-
-	/* ---------- Our Services (Beyond Detailing) ---------- */
-	document.querySelectorAll('[data-bds]').forEach(function (root) {
-		var cards = Array.prototype.slice.call(root.querySelectorAll('[data-bds-card]'));
-		function open(card, scroll) {
-			cards.forEach(function (c) {
-				var on = c === card;
-				c.setAttribute('aria-expanded', on ? 'true' : 'false');
-				var panel = document.getElementById(c.getAttribute('aria-controls'));
-				if (panel) panel.hidden = !on;
-			});
-			var p = document.getElementById(card.getAttribute('aria-controls'));
-			if (scroll && p) {
-				var r = p.getBoundingClientRect();
-				if (r.top > window.innerHeight - 120 || r.top < 0) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		}
-		cards.forEach(function (card) {
-			card.addEventListener('click', function () { open(card, true); });
-		});
-		// Open a service from the URL, e.g. /beyond-detailing/#services-wraps
-		var hash = window.location.hash.slice(1);
-		if (hash) {
-			cards.forEach(function (card) {
-				if (card.getAttribute('aria-controls') === hash) { open(card, false); document.getElementById(hash).scrollIntoView(); }
-			});
-		}
 	});
 
 	/* ---------- Pick a package + add-ons, then book from the bottom bar ----------
