@@ -12,7 +12,13 @@ $bg = 'dark' === get_sub_field( 'background' ) ? 'dark' : 'light';
 	<div class="container">
 		<?php if ( $h = get_sub_field( 'heading' ) ) : ?><h2 class="work__title"><?php echo dlux_heading( $h ); // phpcs:ignore ?></h2><?php endif; ?>
 		<?php if ( $t = get_sub_field( 'intro' ) ) : ?><p class="work__intro"><?php echo wp_kses( dlux_tokens( $t ), [ 'br' => [] ] ); ?></p><?php endif; ?>
-		<ul class="work__grid">
+		<div class="work__slider">
+		<?php if ( count( $items ) > 1 ) : ?>
+			<button type="button" class="carousel-nav__btn carousel-nav__btn--prev" data-work-prev aria-label="<?php esc_attr_e( 'Previous photos', 'dlux' ); ?>">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</button>
+		<?php endif; ?>
+		<ul class="work__grid"<?php echo count( $items ) > 1 ? ' data-work-carousel' : ''; ?>>
 			<?php foreach ( $items as $it ) :
 				$before = $it['before_image']['ID'] ?? 0;
 				$after  = $it['after_image']['ID'] ?? 0;
@@ -33,5 +39,11 @@ $bg = 'dark' === get_sub_field( 'background' ) ? 'dark' : 'light';
 				</li>
 			<?php endforeach; ?>
 		</ul>
+		<?php if ( count( $items ) > 1 ) : ?>
+			<button type="button" class="carousel-nav__btn carousel-nav__btn--next" data-work-next aria-label="<?php esc_attr_e( 'Next photos', 'dlux' ); ?>">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</button>
+		<?php endif; ?>
+		</div>
 	</div>
 </section>

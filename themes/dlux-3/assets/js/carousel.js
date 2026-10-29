@@ -1,4 +1,4 @@
-/* Beyond the wash + Detailing packages: package carousels (Slick) – infinite loop, 4 visible, 1 slide per arrow click. */
+/* Beyond the wash, Detailing packages + Our work gallery: carousels (Slick) – infinite loop, 4 visible, 1 slide per arrow click. */
 (function ($) {
 	'use strict';
 	if (!$ || !$.fn.slick) return;
@@ -76,6 +76,37 @@
 					{ breakpoint: 1181, settings: { slidesToShow: 3 } },
 					{ breakpoint: 961, settings: { slidesToShow: 2 } },
 					{ breakpoint: 641, settings: { slidesToShow: 1 } }
+				]
+			});
+		});
+
+		// Our work (before / after gallery): 4 visible, 1 per click, infinite loop.
+		$('[data-work-carousel]').each(function () {
+			var $track = $(this);
+			var $wrap = $track.closest('.work__slider');
+			var $items = $track.children();
+			if ($items.length < 2) return;
+
+			if ($items.length <= MAX_VISIBLE) {
+				while ($track.children().length <= MAX_VISIBLE) {
+					$items.clone().addClass('is-duplicate').attr('aria-hidden', 'true').appendTo($track);
+				}
+			}
+
+			$track.slick({
+				slidesToShow: MAX_VISIBLE,
+				slidesToScroll: 1,
+				infinite: true,
+				rows: 0,
+				speed: 400,
+				arrows: true,
+				dots: false,
+				prevArrow: $wrap.find('[data-work-prev]'),
+				nextArrow: $wrap.find('[data-work-next]'),
+				responsive: [
+					{ breakpoint: 1025, settings: { slidesToShow: 3 } },
+					{ breakpoint: 769, settings: { slidesToShow: 2 } },
+					{ breakpoint: 481, settings: { slidesToShow: 1 } }
 				]
 			});
 		});

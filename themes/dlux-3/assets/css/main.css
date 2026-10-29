@@ -5846,3 +5846,34 @@ body.has-pick-bar { padding-bottom: 96px; }
 	.dpk__slider .carousel-nav__btn--prev { left: -8px; }
 	.dpk__slider .carousel-nav__btn--next { right: -8px; }
 }
+
+/* ---------- Our work gallery slider (Slick) ---------- */
+.work__slider { position: relative; margin-top: 22px; }
+.work__slider .work__grid { margin-top: 0; }
+.work__grid.slick-initialized { display: block; }
+.work__grid .slick-list { margin: 0 -6px; }
+.work__grid .slick-slide { margin: 0 6px; }
+
+.work__slider .carousel-nav__btn {
+	position: absolute;
+	top: calc(50% - 14px); /* centred on the photos, above the captions */
+	z-index: 3;
+	transform: translateY(-50%);
+	border-color: var(--accent);
+	background: var(--accent);
+	color: #fff;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+}
+
+.work__slider .carousel-nav__btn:hover { border-color: var(--accent-dark); background: var(--accent-dark); }
+.work__slider .carousel-nav__btn--prev { left: -22px; }
+.work__slider .carousel-nav__btn--next { right: -22px; }
+
+/* Before the slider starts (or without JS): the normal grid, arrows hidden */
+.work__slider .work__grid:not(.slick-initialized) ~ .carousel-nav__btn,
+.work__slider .carousel-nav__btn:has(~ .work__grid:not(.slick-initialized)) { display: none; }
+
+@media (max-width: 1300px) {
+	.work__slider .carousel-nav__btn--prev { left: -8px; }
+	.work__slider .carousel-nav__btn--next { right: -8px; }
+}
