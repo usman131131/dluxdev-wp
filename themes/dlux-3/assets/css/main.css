@@ -5788,3 +5788,27 @@ body.has-pick-bar { padding-bottom: 96px; }
 	.pick-bar__btn { order: 4; flex: 1 1 auto; }
 	body.has-pick-bar { padding-bottom: 150px; }
 }
+
+/* ---------- Visit us: call icon (replaces the primary button) ---------- */
+.visit .btn-group { align-items: center; }
+
+.visit-call {
+	display: inline-grid;
+	flex: 0 0 auto;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: var(--accent);
+	color: #fff;
+	text-decoration: none;
+	transition: background-color .2s, transform .2s;
+}
+
+.visit-call:hover,
+.visit-call:focus-visible {
+	background: var(--accent-dark);
+	transform: translateY(-1px);
+}
+
+.visit-call svg { width: 20px; height: 20px; }

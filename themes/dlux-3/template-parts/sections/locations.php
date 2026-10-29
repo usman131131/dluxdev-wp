@@ -34,7 +34,19 @@ $map       = dlux_map_with_marker( $map, (array) dlux_option( 'locations', [] ) 
 
 			<div class="btn-group">
 				<?php
-				echo dlux_button( get_sub_field( 'primary_button' ), 'btn--primary btn--sm' ); // phpcs:ignore
+				// Primary button shows as a call icon. Number: Theme Settings › Header call & WhatsApp buttons
+				// (or the Theme Settings phone); if neither is set, the button's own link is used.
+				$primary  = get_sub_field( 'primary_button' );
+				$call_url = function_exists( 'dlux_call_url' ) ? dlux_call_url() : '';
+				$call_url = $call_url ?: ( $primary['url'] ?? '' );
+				if ( $call_url ) {
+					$label = ! empty( $primary['title'] ) ? $primary['title'] : ( trim( (string) dlux_option( 'call_label', '' ) ) ?: __( 'Call us', 'dlux' ) );
+					printf(
+						'<a class="visit-call" href="%1$s" aria-label="%2$s" title="%2$s"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></a>',
+						esc_url( $call_url, [ 'tel', 'http', 'https', 'sms', 'mailto' ] ),
+						esc_attr( $label )
+					);
+				}
 				echo dlux_button( get_sub_field( 'secondary_button' ), 'btn--outline btn--sm' ); // phpcs:ignore
 				?>
 			</div>
