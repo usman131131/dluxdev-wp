@@ -122,5 +122,10 @@ function dlux_bk_send_emails( $booking_id ) {
 		}
 	}
 
+	// Text messages (ClickSend), if switched on.
+	if ( function_exists( 'dlux_bk_send_sms' ) ) {
+		dlux_bk_send_sms( $booking_id );
+	}
+
 	delete_post_meta( $booking_id, '_dlux_mailing' );
 }

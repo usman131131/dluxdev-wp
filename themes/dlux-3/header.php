@@ -11,6 +11,7 @@
 <a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'dlux' ); ?></a>
 
 <header class="site-header" data-header>
+	<?php $dlux_header_icons = function_exists( 'dlux_header_icons' ) ? dlux_header_icons() : ''; ?>
 	<div class="container site-header__inner">
 		<?php echo dlux_logo( dlux_option( 'header_logo' ) ?: dlux_option( 'site_logo' ) ); // phpcs:ignore ?>
 
@@ -34,12 +35,13 @@
 			<div class="site-header__actions">
 				<?php
 				echo dlux_button( dlux_option( 'header_primary_button' ), 'btn--primary btn--sm' ); // phpcs:ignore
-				// WhatsApp icon (Theme Settings › Header WhatsApp button) replaces the secondary button when set.
-				$wa = function_exists( 'dlux_whatsapp_button' ) ? dlux_whatsapp_button() : '';
-				echo $wa ? $wa : dlux_button( dlux_option( 'header_secondary_button' ), 'btn--outline btn--sm' ); // phpcs:ignore
+				// Call / WhatsApp icons (Theme Settings › Header call & WhatsApp buttons) replace the secondary button when set.
+				if ( ! $dlux_header_icons ) echo dlux_button( dlux_option( 'header_secondary_button' ), 'btn--outline btn--sm' ); // phpcs:ignore
 				?>
 			</div>
 		</div>
+
+		<?php echo $dlux_header_icons; // phpcs:ignore – next to Book on desktop, next to the menu button on mobile ?>
 	</div>
 </header>
 

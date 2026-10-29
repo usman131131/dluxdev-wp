@@ -5581,10 +5581,18 @@ body.voucher-open {
 	text-transform: none;
 }
 
-/* ---------- Header WhatsApp button ---------- */
+/* ---------- Header call + WhatsApp icons ---------- */
 .site-header__actions { align-items: center; }
 
-.header-whatsapp {
+.header-icons {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 8px;
+	margin-left: -12px; /* sit 12px from the Book button instead of the 24px header gap */
+}
+
+.header-icon {
 	display: inline-grid;
 	flex: 0 0 auto;
 	place-items: center;
@@ -5598,29 +5606,44 @@ body.voucher-open {
 	transition: background-color .2s, border-color .2s, transform .2s;
 }
 
-.header-whatsapp:hover,
-.header-whatsapp:focus-visible {
+.header-icon:hover,
+.header-icon:focus-visible {
 	border-color: var(--accent);
 	background: var(--accent);
 	transform: translateY(-1px);
 }
+
+.header-icon svg { width: 20px; height: 20px; }
 .header-whatsapp svg { width: 22px; height: 22px; }
 .header-whatsapp__label { display: none; }
 
 @media (max-width: 1024px) {
-	.header-whatsapp {
-		display: inline-flex;
-		gap: 10px;
-		width: 100%;
-		height: auto;
-		min-height: 52px;
-		border-radius: var(--pill);
-		justify-content: center;
-		font: 600 14px/1 var(--font-sub);
-		letter-spacing: .02em;
-		text-transform: uppercase;
+	.site-header__inner { gap: 10px; }
+
+	/* logo · (space) · call · WhatsApp · menu */
+	.header-icons {
+		order: 2;
+		margin-left: auto;
 	}
-	.header-whatsapp__label { display: inline; }
+
+	.nav-toggle {
+		order: 3;
+		margin-left: 0;
+	}
+
+	.header-icon { width: 38px; height: 38px; }
+
+	.logo { min-width: 0; flex-shrink: 1; }
+	.logo__img { max-height: 28px; max-width: 150px; }
+	.logo--text { font-size: 22px; }
+}
+
+@media (max-width: 400px) {
+	.header-icons { gap: 6px; }
+	.header-icon { width: 34px; height: 34px; }
+	.header-icon svg { width: 18px; height: 18px; }
+	.logo__img { max-height: 24px; max-width: 120px; }
+	.logo--text { font-size: 19px; }
 }
 
 /* ---------- Add-on cards (selectable) + bottom selection bar ---------- */

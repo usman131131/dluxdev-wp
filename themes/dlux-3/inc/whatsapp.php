@@ -1,8 +1,9 @@
 <?php
 /**
- * Header WhatsApp button.
- * Settings: Theme Settings › "Header WhatsApp button" box (fields registered here, no import needed).
- * When a number or link is set, the header shows a WhatsApp icon instead of the secondary button.
+ * Header call + WhatsApp icon buttons.
+ * Settings: Theme Settings › "Header call & WhatsApp buttons" box (fields registered here, no import needed).
+ * When either is set, the header shows round icons (next to the Book button on desktop,
+ * next to the menu button on mobile) instead of the secondary button.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
@@ -10,10 +11,51 @@ add_action( 'acf/init', function () {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) return;
 	acf_add_local_field_group( [
 		'key'        => 'group_dlux_whatsapp',
-		'title'      => __( 'Header WhatsApp button', 'dlux' ),
+		'title'      => __( 'Header call & WhatsApp buttons', 'dlux' ),
 		'menu_order' => 5,
 		'location'   => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'theme-settings' ] ] ],
 		'fields'     => [
+			[
+				'key'       => 'field_dlux_hi_tab_call',
+				'label'     => __( 'Call button', 'dlux' ),
+				'name'      => '',
+				'type'      => 'tab',
+				'placement' => 'top',
+			],
+			[
+				'key'           => 'field_dlux_call_enabled',
+				'name'          => 'call_enabled',
+				'label'         => __( 'Show call button in the header', 'dlux' ),
+				'type'          => 'true_false',
+				'ui'            => 1,
+				'default_value' => 1,
+				'wrapper'       => [ 'width' => '30' ],
+			],
+			[
+				'key'          => 'field_dlux_call_number',
+				'name'         => 'call_number',
+				'label'        => __( 'Phone number', 'dlux' ),
+				'type'         => 'text',
+				'placeholder'  => '0410 111 190',
+				'instructions' => __( 'Leave empty to use the phone number from Theme Settings.', 'dlux' ),
+				'wrapper'      => [ 'width' => '35' ],
+			],
+			[
+				'key'           => 'field_dlux_call_label',
+				'name'          => 'call_label',
+				'label'         => __( 'Button label', 'dlux' ),
+				'type'          => 'text',
+				'default_value' => 'Call us',
+				'instructions'  => __( 'Tooltip and screen-reader text.', 'dlux' ),
+				'wrapper'       => [ 'width' => '35' ],
+			],
+			[
+				'key'       => 'field_dlux_hi_tab_wa',
+				'label'     => __( 'WhatsApp button', 'dlux' ),
+				'name'      => '',
+				'type'      => 'tab',
+				'placement' => 'top',
+			],
 			[
 				'key'           => 'field_dlux_wa_enabled',
 				'name'          => 'whatsapp_enabled',
@@ -21,7 +63,7 @@ add_action( 'acf/init', function () {
 				'type'          => 'true_false',
 				'ui'            => 1,
 				'default_value' => 1,
-				'instructions'  => __( 'Replaces the header’s secondary button (e.g. "Contact us") with a WhatsApp icon. Turn off to show the secondary button again.', 'dlux' ),
+				'instructions'  => __( 'With the call and/or WhatsApp icon on, the header’s secondary button (e.g. "Contact us") is hidden. Turn both off to show it again.', 'dlux' ),
 				'wrapper'       => [ 'width' => '100' ],
 			],
 			[
@@ -57,7 +99,7 @@ add_action( 'acf/init', function () {
 				'label'         => __( 'Button label', 'dlux' ),
 				'type'          => 'text',
 				'default_value' => 'Chat on WhatsApp',
-				'instructions'  => __( 'Shown as a tooltip, read out by screen readers, and shown next to the icon in the mobile menu.', 'dlux' ),
+				'instructions'  => __( 'Tooltip and screen-reader text.', 'dlux' ),
 			],
 		],
 	] );
@@ -92,10 +134,39 @@ function dlux_whatsapp_button() {
 	if ( ! $url ) return '';
 	$label = trim( (string) dlux_option( 'whatsapp_label', '' ) ) ?: __( 'Chat on WhatsApp', 'dlux' );
 	return sprintf(
-		'<a class="header-whatsapp" href="%1$s" target="_blank" rel="noopener" aria-label="%2$s" title="%2$s">%3$s<span class="header-whatsapp__label">%4$s</span></a>',
+		'<a class="header-icon header-whatsapp" href="%1$s" target="_blank" rel="noopener" aria-label="%2$s" title="%2$s">%3$s<span class="header-whatsapp__label">%4$s</span></a>',
 		esc_url( $url ),
 		esc_attr( $label ),
 		'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.43 9.43 0 01-4.8-1.32l-.35-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 01-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44a9.38 9.38 0 016.68 2.77 9.38 9.38 0 012.76 6.68c0 5.2-4.24 9.44-9.45 9.44zm8.04-17.48A11.3 11.3 0 0012.04.7C5.77.7.66 5.8.66 12.08c0 2 .52 3.96 1.52 5.69L.57 23.7l6.07-1.6a11.33 11.33 0 005.4 1.38h.01c6.27 0 11.38-5.11 11.38-11.39 0-3.04-1.18-5.9-3.35-8.06z"/></svg>',
 		esc_html( $label )
 	);
+}
+
+/** tel: link for the header call button, or '' when off / no number. */
+function dlux_call_url() {
+	$on = dlux_option( 'call_enabled', 1 );
+	if ( ! $on || '0' === $on ) return '';
+	$num = trim( (string) dlux_option( 'call_number', '' ) );
+	if ( '' === $num ) $num = trim( (string) dlux_option( 'phone', '' ) );
+	if ( '' === $num ) return '';
+	$tel = function_exists( 'dlux_bk_phone_e164' ) ? dlux_bk_phone_e164( $num ) : preg_replace( '/[^0-9+]/', '', $num );
+	return $tel ? 'tel:' . $tel : '';
+}
+
+/** Header call icon button. */
+function dlux_call_button() {
+	$url = dlux_call_url();
+	if ( ! $url ) return '';
+	$label = trim( (string) dlux_option( 'call_label', '' ) ) ?: __( 'Call us', 'dlux' );
+	return sprintf(
+		'<a class="header-icon header-icon--call" href="%1$s" aria-label="%2$s" title="%2$s"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></a>',
+		esc_url( $url, [ 'tel' ] ),
+		esc_attr( $label )
+	);
+}
+
+/** Call + WhatsApp icons for the header ('' when neither is set). */
+function dlux_header_icons() {
+	$html = dlux_call_button() . dlux_whatsapp_button();
+	return $html ? '<div class="header-icons">' . $html . '</div>' : '';
 }

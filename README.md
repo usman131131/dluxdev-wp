@@ -8,7 +8,7 @@ Source for the **DLux Hand Car Wash & Detailing** website (dluxwash.com.au): the
 | **Plugin** | `plugins/dlux-booking` — Dlux Booking, v5.0.1 |
 | **Requires** | WordPress 6.0+, PHP 7.4+, Secure Custom Fields (SCF) or ACF Pro |
 | **Payments** | Stripe Checkout (card) or pay at the shop |
-| **Notifications** | Branded HTML emails |
+| **Notifications** | Branded HTML emails, optional ClickSend SMS |
 
 ---
 
@@ -194,6 +194,7 @@ plugins/dlux-booking/
     ├── availability.php        opening hours, time slots, slot holds
     ├── stripe.php              Stripe Checkout, webhook, sync, clean-up
     ├── email-template.php      branded email templates + senders
+    ├── sms.php                 booking SMS via ClickSend + SMS log
     ├── emails.php              booking confirmation emails (customer + shop)
     ├── rest.php                booking widget REST API
     ├── app-api.php             Wash Desk app REST API
@@ -287,6 +288,12 @@ The terms link defaults to `/terms-and-conditions/`; change it with the `dlux_bo
 `dlux_bk_mail()` sends the dark template; `dlux_bk_mail_raw()` sends ready-made HTML. Both add the plain-text alternative. Many hosts can't send mail without SMTP — use an SMTP plugin on the live site. Check **WP Mail Logging › Email Log** to see what was sent.
 
 ---
+
+### 7.3 Booking SMS (ClickSend)
+
+Optional texts to the customer and the shop, sent once per booking together with the confirmation emails. Set up in **Theme Settings › Booking & Payments › SMS (ClickSend)**: switch on, ClickSend username + API key (ClickSend › Developers › API Credentials), optional sender, shop numbers and message templates (tags such as `{first_name}`, `{when}`, `{package}`, `{total}`).
+
+Every attempt (sent, failed or skipped, with ClickSend's reply) is listed in **Bookings › SMS log**, which also has a **Send test SMS** button.
 
 ## 8. REST API
 
