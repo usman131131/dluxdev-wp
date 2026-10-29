@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Dlux Booking
  * Description:       Online wash and detailing bookings for Dlux Hand Car Wash & Detailing. Prices are set on the Booking Prices page, payments go through Stripe Checkout, and bookings are stored in WordPress.
- * Version:           5.0.1
+ * Version:           5.0.2
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Dlux Hand Car Wash & Detailing
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DLUX_BOOKING_VER', '5.0.1' );
+define( 'DLUX_BOOKING_VER', '5.0.2' );
 define( 'DLUX_BOOKING_FILE', __FILE__ );
 define( 'DLUX_BOOKING_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -31,7 +31,6 @@ require DLUX_BOOKING_DIR . 'includes/availability.php';
 require DLUX_BOOKING_DIR . 'includes/stripe.php';
 require DLUX_BOOKING_DIR . 'includes/email-template.php';
 require DLUX_BOOKING_DIR . 'includes/emails.php';
-require DLUX_BOOKING_DIR . 'includes/sms.php';
 require DLUX_BOOKING_DIR . 'includes/rest.php';
 require DLUX_BOOKING_DIR . 'includes/app-api.php';
 require DLUX_BOOKING_DIR . 'includes/admin.php';
@@ -58,6 +57,15 @@ function dlux_bk_install() {
 	if ( ! wp_next_scheduled( 'dlux_bk_cleanup' ) ) {
 		wp_schedule_event( time() + 300, 'hourly', 'dlux_bk_cleanup' );
 	}
+
+	// SMS (Twilio) was removed in 5.0.2: delete its settings (incl. the auth token), log and sent flags.
+	foreach ( array( 'sms_on', 'twilio_sid', 'twilio_token', 'twilio_from', 'sms_country', 'sms_admin_to', 'sms_customer', 'sms_admin' ) as $opt ) {
+		delete_option( 'options_dlux_bk_' . $opt );
+		delete_option( '_options_dlux_bk_' . $opt );
+	}
+	delete_option( 'dlux_bk_sms_log' );
+	global $wpdb;
+	$wpdb->query( "DELETE FROM {$wpdb->postmeta} WHERE meta_key LIKE '\\_dlux\\_sms\\_%'" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 
 	// Settings from the old Supabase version are no longer used.
 	delete_option( 'dlux_booking_settings' );

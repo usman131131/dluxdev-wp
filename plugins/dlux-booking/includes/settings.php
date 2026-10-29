@@ -343,87 +343,30 @@ add_action(
 						'placeholder'  => get_option( 'admin_email' ),
 						'instructions' => 'One or more addresses, separated by commas. Leave empty for the site admin email.',
 					),
-
-					/* ---------- SMS (Twilio) ---------- */
-					array( 'key' => $k( 'tab_sms' ), 'label' => 'SMS (Twilio)', 'type' => 'tab', 'placement' => 'top' ),
-					array(
-						'key'          => $k( 'sms_on' ),
-						'name'         => 'dlux_bk_sms_on',
-						'label'        => 'Send booking SMS',
-						'type'         => 'true_false',
-						'ui'           => 1,
-						'message'      => 'Text the customer and the shop when a booking is confirmed.',
-						'instructions' => 'Sent once per booking: when a card payment goes through, or straight away for pay-at-the-shop bookings.',
-					),
-					array(
-						'key'          => $k( 'twilio_sid' ),
-						'name'         => 'dlux_bk_twilio_sid',
-						'label'        => 'Account SID',
-						'type'         => 'text',
-						'placeholder'  => 'AC…',
-						'instructions' => 'Twilio Console › Account info.',
-						'wrapper'      => array( 'width' => '50' ),
-					),
-					array(
-						'key'          => $k( 'twilio_token' ),
-						'name'         => 'dlux_bk_twilio_token',
-						'label'        => 'Auth token',
-						'type'         => 'password',
-						'instructions' => 'Twilio Console › Account info. Kept on your server only.',
-						'wrapper'      => array( 'width' => '50' ),
-					),
-					array(
-						'key'          => $k( 'twilio_from' ),
-						'name'         => 'dlux_bk_twilio_from',
-						'label'        => 'Send from',
-						'type'         => 'text',
-						'placeholder'  => '+61400000000 or MG…',
-						'instructions' => 'Your Twilio phone number (+61…), an approved alphanumeric sender ID (e.g. DLUXWASH), or a Messaging Service SID (MG…).',
-						'wrapper'      => array( 'width' => '50' ),
-					),
-					array(
-						'key'           => $k( 'sms_country' ),
-						'name'          => 'dlux_bk_sms_country',
-						'label'         => 'Country code',
-						'type'          => 'text',
-						'default_value' => '+61',
-						'instructions'  => 'Added to local numbers like 0410 111 190 → +61410111190.',
-						'wrapper'       => array( 'width' => '50' ),
-					),
-					array(
-						'key'          => $k( 'sms_admin_to' ),
-						'name'         => 'dlux_bk_sms_admin_to',
-						'label'        => 'Send shop SMS to',
-						'type'         => 'text',
-						'instructions' => 'One or more mobile numbers, separated by commas. Leave empty to only text the customer.',
-					),
-					array(
-						'key'           => $k( 'sms_customer' ),
-						'name'          => 'dlux_bk_sms_customer',
-						'label'         => 'Customer message',
-						'type'          => 'textarea',
-						'rows'          => 3,
-						'new_lines'     => '',
-						'default_value' => dlux_bk_sms_default( 'customer' ),
-						'instructions'  => 'Tags: {first_name} {name} {business} {when} {package} {option} {size} {extras} {total} {payment} {rego} {shop_phone} {address}',
-						'wrapper'       => array( 'width' => '50' ),
-					),
-					array(
-						'key'           => $k( 'sms_admin' ),
-						'name'          => 'dlux_bk_sms_admin',
-						'label'         => 'Shop message',
-						'type'          => 'textarea',
-						'rows'          => 3,
-						'new_lines'     => '',
-						'default_value' => dlux_bk_sms_default( 'admin' ),
-						'instructions'  => 'Same tags, plus {phone} and {email} (the customer\'s).',
-						'wrapper'       => array( 'width' => '50' ),
-					),
 				),
 			)
 		);
 	}
 );
+
+/**
+ * A phone number in international format (+61410111190), for tel:/sms:/WhatsApp links.
+ * Local numbers get the country code (filter: dlux_booking_phone_country, default +61).
+ */
+function dlux_bk_phone_e164( $raw ) {
+	$n = preg_replace( '/[^0-9+]/', '', (string) $raw );
+	if ( '' === $n ) {
+		return '';
+	}
+	if ( 0 === strpos( $n, '+' ) ) {
+		return $n;
+	}
+	if ( 0 === strpos( $n, '00' ) ) {
+		return '+' . substr( $n, 2 );
+	}
+	$cc = '+' . ltrim( preg_replace( '/[^0-9]/', '', (string) apply_filters( 'dlux_booking_phone_country', '+61' ) ), '+' );
+	return $cc . ltrim( $n, '0' );
+}
 
 /** Settings with defaults applied. */
 function dlux_bk_business() {

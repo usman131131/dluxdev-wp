@@ -8,7 +8,7 @@ Source for the **DLux Hand Car Wash & Detailing** website (dluxwash.com.au): the
 | **Plugin** | `plugins/dlux-booking` — Dlux Booking, v5.0.1 |
 | **Requires** | WordPress 6.0+, PHP 7.4+, Secure Custom Fields (SCF) or ACF Pro |
 | **Payments** | Stripe Checkout (card) or pay at the shop |
-| **Notifications** | Branded HTML emails, optional Twilio SMS |
+| **Notifications** | Branded HTML emails |
 
 ---
 
@@ -21,12 +21,11 @@ Source for the **DLux Hand Car Wash & Detailing** website (dluxwash.com.au): the
 5. [Plugin: Dlux Booking (`dlux-booking`)](#5-plugin-dlux-booking-dlux-booking)
 6. [Booking flow](#6-booking-flow)
 7. [Emails](#7-emails)
-8. [SMS (Twilio)](#8-sms-twilio)
-9. [REST API](#9-rest-api)
-10. [Hooks for developers](#10-hooks-for-developers)
-11. [Deployment](#11-deployment)
-12. [Troubleshooting](#12-troubleshooting)
-13. [Further documentation](#13-further-documentation)
+8. [REST API](#8-rest-api)
+9. [Hooks for developers](#9-hooks-for-developers)
+10. [Deployment](#10-deployment)
+11. [Troubleshooting](#11-troubleshooting)
+12. [Further documentation](#12-further-documentation)
 
 ---
 
@@ -72,7 +71,7 @@ Ignored (see `.gitignore`):
 - `.env*` secrets, database exports (`*.sql`, `*.sql.gz`, `*.sqlite`), backups (`*.bak`, `*.backup`)
 - OS / editor files (`.DS_Store`, `Thumbs.db`, `.vscode/`, `.idea/`)
 
-> Never commit Stripe keys, Twilio tokens or database dumps. These live in the WordPress database (Theme Settings), not in files.
+> Never commit Stripe keys or database dumps. These live in the WordPress database (Theme Settings), not in files.
 
 ---
 
@@ -196,7 +195,6 @@ plugins/dlux-booking/
     ├── stripe.php              Stripe Checkout, webhook, sync, clean-up
     ├── email-template.php      branded email templates + senders
     ├── emails.php              booking confirmation emails (customer + shop)
-    ├── sms.php                 Twilio SMS
     ├── rest.php                booking widget REST API
     ├── app-api.php             Wash Desk app REST API
     ├── admin.php               Bookings › Prices & setup page
@@ -219,7 +217,6 @@ plugins/dlux-booking/
 |---|---|
 | Stripe keys, booking hours, slot length, pages, business details, notification email | **Theme Settings › Booking & Payments** |
 | Vehicle sizes, wash packages, detailing packages, extras | **Theme Settings › Booking Prices** |
-| Twilio SMS | **Theme Settings › SMS (Twilio)** |
 | Gift voucher popup and sign-ups | **Theme Settings › Gift Voucher Popup** |
 | Bookings | **Bookings** menu |
 | Check what the booking page offers | **Bookings › Prices & setup** |
@@ -230,7 +227,7 @@ Each booking is a `dlux_booking` post. Fields are stored as post meta with the `
 
 `bk_status`, `bk_payment`, `bk_date`, `bk_time`, `bk_service`, `bk_vehicle_size`, `bk_package`, `bk_option`, `bk_addons`, `bk_total`, `bk_name`, `bk_phone`, `bk_email`, `bk_rego`, `bk_vehicle`, `bk_notes`, `bk_channel`, `bk_consent`, `bk_stripe_session`, `bk_stripe_payment_intent`, `bk_amount_paid`, `bk_paid_at`.
 
-Internal meta: `_dlux_items` (package + extras with prices), `_dlux_mins` (duration), `_dlux_token` (confirmation link), `_dlux_mailed_customer` / `_dlux_mailed_admin` (email sent flags), `_dlux_sms_customer` (SMS sent flag), `_dlux_late_payment`.
+Internal meta: `_dlux_items` (package + extras with prices), `_dlux_mins` (duration), `_dlux_token` (confirmation link), `_dlux_mailed_customer` / `_dlux_mailed_admin` (email sent flags), `_dlux_late_payment`.
 
 `dlux_bk_booking( $id )` returns everything about a booking in one array.
 
@@ -242,7 +239,7 @@ Internal meta: `_dlux_items` (package + extras with prices), `_dlux_mins` (durat
 2. A booking is created and the time slot is **held for 35 minutes**.
 3. **Card**: customer goes to Stripe Checkout. When paid, the booking becomes *Confirmed / Paid online*.
    **Pay at the shop**: the booking is confirmed straight away.
-4. Confirmation emails (and SMS, if switched on) are sent **once** to the customer and the shop.
+4. Confirmation emails are sent **once** to the customer and the shop.
 5. Cancelled checkout frees the slot immediately; abandoned checkout frees it after 35 minutes (hourly clean-up).
 6. Refunds are made in Stripe; with the webhook set up the booking becomes *Refunded / Cancelled*.
 
@@ -291,17 +288,7 @@ The terms link defaults to `/terms-and-conditions/`; change it with the `dlux_bo
 
 ---
 
-## 8. SMS (Twilio)
-
-Optional texts to the customer and the shop, sent with the confirmation emails. Set up in **Theme Settings › SMS (Twilio)**: Account SID, auth token, from number, country code (default `+61`), shop numbers and message templates.
-
-Template placeholders: `{first_name}`, `{name}`, `{business}`, `{when}`, `{package}`, `{option}`, `{size}`, `{extras}`, `{total}`, `{payment}`, `{rego}`, `{phone}`, `{email}`, `{shop_phone}`, `{address}`.
-
-Every attempt is written to the SMS log.
-
----
-
-## 9. REST API
+## 8. REST API
 
 Namespace `dlux/v1` (`/wp-json/dlux/v1/…`).
 
@@ -322,7 +309,7 @@ Namespace `dlux/v1` (`/wp-json/dlux/v1/…`).
 
 ---
 
-## 10. Hooks for developers
+## 9. Hooks for developers
 
 **Filters**
 
@@ -347,7 +334,7 @@ Namespace `dlux/v1` (`/wp-json/dlux/v1/…`).
 
 ---
 
-## 11. Deployment
+## 10. Deployment
 
 1. Commit and push changes to `main`.
 2. On the live site, update the theme and/or plugin:
@@ -359,7 +346,7 @@ Namespace `dlux/v1` (`/wp-json/dlux/v1/…`).
 
 ---
 
-## 12. Troubleshooting
+## 11. Troubleshooting
 
 | Problem | Check |
 |---|---|
@@ -368,12 +355,11 @@ Namespace `dlux/v1` (`/wp-json/dlux/v1/…`).
 | Bookings stay "Awaiting payment" | Stripe webhook URL and signing secret |
 | No emails | SMTP on the host; **WP Mail Logging** shows what was sent |
 | Email still shows the old design | Emails are sent once per booking — make a new booking |
-| SMS not sent | **Theme Settings › SMS (Twilio)** and the SMS log |
 | CSS/JS changes not showing | Clear page cache / CDN |
 
 ---
 
-## 13. Further documentation
+## 12. Further documentation
 
 - `plugins/dlux-booking/README.md` — full plugin setup guide (Stripe, prices, settings, admin)
 - `plugins/dlux-booking/APP-API.md` — Wash Desk app API and security

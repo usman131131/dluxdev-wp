@@ -327,7 +327,7 @@ function dlux_bk_admin_booking_email_html( array $b, array $extra = array() ) {
 		$initials = mb_strtoupper( mb_substr( $parts[0], 0, 1 ) . ( count( $parts ) > 1 ? mb_substr( end( $parts ), 0, 1 ) : '' ) );
 	}
 	$mobile   = $b['phone'];
-	$e164     = function_exists( 'dlux_bk_sms_number' ) ? dlux_bk_sms_number( $mobile ) : preg_replace( '/[^0-9+]/', '', $mobile );
+	$e164     = function_exists( 'dlux_bk_phone_e164' ) ? dlux_bk_phone_e164( $mobile ) : preg_replace( '/[^0-9+]/', '', $mobile );
 	$email    = is_email( $b['email'] ) ? $b['email'] : '';
 	$contact  = implode( ' &nbsp;|&nbsp; ', array_filter( array( $e( $mobile ), $e( $email ) ) ) );
 	$buttons  = array_filter(

@@ -78,7 +78,7 @@ function dlux_whatsapp_url() {
 	} elseif ( 0 === strpos( $num, '00' ) ) {
 		$num = substr( $num, 2 );
 	} elseif ( 0 === strpos( $num, '0' ) ) {
-		$cc  = function_exists( 'dlux_bk_opt' ) ? (string) dlux_bk_opt( 'sms_country', '+61' ) : '+61';
+		$cc  = (string) apply_filters( 'dlux_booking_phone_country', '+61' );
 		$num = preg_replace( '/\D/', '', $cc ?: '61' ) . ltrim( $num, '0' );
 	}
 	$url = 'https://wa.me/' . preg_replace( '/\D/', '', $num );
