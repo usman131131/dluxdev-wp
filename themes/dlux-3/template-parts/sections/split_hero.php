@@ -18,7 +18,20 @@ $highlights = array_filter( (array) ( get_sub_field( 'highlights' ) ?: [] ), fun
 				<p class="split-hero__text"><?php echo wp_kses( dlux_tokens( $t ), [ 'br' => [] ] ); ?></p>
 			<?php endif; ?>
 			<?php
-			$btns = dlux_button( get_sub_field( 'primary_button' ), 'btn--primary', false ) . dlux_button( get_sub_field( 'secondary_button' ), 'btn--ghost', false );
+			// Secondary button shows as a phone icon; its link (and label, used for the tooltip) come from the field.
+			$sec  = get_sub_field( 'secondary_button' );
+			$icon = '';
+			if ( ! empty( $sec['url'] ) ) {
+				$label  = ! empty( $sec['title'] ) ? $sec['title'] : __( 'Call us', 'dlux' );
+				$target = ! empty( $sec['target'] ) ? $sec['target'] : '';
+				$icon   = sprintf(
+					'<a class="hero-call" href="%1$s"%3$s aria-label="%2$s" title="%2$s"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></a>',
+					esc_url( $sec['url'], [ 'http', 'https', 'tel', 'sms', 'mailto' ] ),
+					esc_attr( $label ),
+					'_blank' === $target ? ' target="_blank" rel="noopener"' : ''
+				);
+			}
+			$btns = dlux_button( get_sub_field( 'primary_button' ), 'btn--primary', false ) . $icon;
 			if ( $btns ) echo '<div class="btn-group">' . $btns . '</div>'; // phpcs:ignore
 			?>
 		</div>
